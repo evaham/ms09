@@ -24,10 +24,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <div>
-          <div className="flex h-16 border">
-            <Link className="mr-4" href="/">첫화면</Link>
+          <div className="flex h-14 items-center border">
+            <Link className="h-full border" href="/" >첫화면</Link>
             <a>레이어팝업<i>아이콘</i></a>
-            <div className="ml-auto">신청조회</div>
+            <div className="h-full ml-auto border">신청조회</div>
           </div>
         </div>
         {children}

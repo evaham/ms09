@@ -1,63 +1,59 @@
 // page number 1
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="">
-      <main className="flex flex-col">
+      <main className="flex flex-col p-2">
         <div>진행중 공동구매</div>
-        <a className="flex gap-4 items-center flex-col sm:flex-row">
-
-        </a>
+        <div className="flex flex-col gap-4">
+          <Link className="flex gap-4 flex-col border border-" href="/group-list">
+            <div>
+              <span>D-7</span><span>01.16(목)~01.23(목)</span>
+            </div>
+            <div>
+              <span>설 맞이 선물 세트 기획전</span>
+            </div>
+            <div>
+              
+            </div>
+          </Link>
+          <a className="flex gap-4 flex-col border border-">
+            <div>
+              <span>D-7</span><span>01.16(목)~01.23(목)</span>
+            </div>
+            <div>
+              <span>설 맞이 선물 세트 기획전</span>
+            </div>
+            <div>
+              
+            </div>
+          </a>
+        </div>
+        <div>진행예정 공동구매</div>
+        <div>
+          <a className="flex gap-4 flex-col border border-">
+            <div>
+              <span>D-7</span><span>01.16(목)~01.23(목)</span>
+            </div>
+            <div>
+              <span>설 맞이 선물 세트 기획전</span>
+            </div>
+            <div>
+              
+            </div>
+          </a>
+        </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <div className="fixed right-0 bottom-0">맨위로</div>
+      <div className="fixed top-20 right-4 left-4 flex flex-col bg-slate-50">
+        <span>매장정보</span><div>닫기</div>
+        <div className="border bg-amber-50">
+          <span>매장명</span><span>아이콘</span>
+        </div>
+      </div>
     </div>
   );
 }

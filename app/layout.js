@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <div>
           <div className="flex h-14 items-center border">
             <Link className="h-full border" href="/" >첫화면</Link>
-            <a>레이어팝업<i>아이콘</i></a>
+            <a>매장명<i>아이콘</i></a>
             <div className="h-full ml-auto border">신청조회</div>
           </div>
         </div>

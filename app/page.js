@@ -30,8 +30,8 @@ export default function Home() {
       <main className="flex flex-col p-2">
         <div className="mt-4 mb-2">진행중 공동구매</div>
         <div className="flex flex-col gap-4">
-          {list.map((item) => (
-            <Link key={item.id} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
+          {list.map((item,index) => (
+            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
                 <div className="text-slate-500 line-clamp-1">{item.date}</div>
@@ -40,8 +40,8 @@ export default function Home() {
               <div className="flex">
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
-                    <div className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
-                      <Image key={index} src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
+                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-gray-200 text-gray-700">
@@ -55,8 +55,8 @@ export default function Home() {
         </div>
         <div className="mt-4 mb-2">진행예정 공동구매</div>
         <div className="flex flex-col gap-4">
-          {list2.map((item) => (
-            <Link key={item.id} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
+          {list2.map((item,index) => (
+            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
                 <div className="text-slate-500 line-clamp-1">{item.date}</div>
@@ -65,8 +65,8 @@ export default function Home() {
               <div className="flex">
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
-                    <div className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
-                      <Image key={index} src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
+                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-gray-200 text-gray-700">

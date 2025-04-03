@@ -23,7 +23,7 @@ export default function GroupList() {
             <div className="grid grid-cols-2 gap-2">
                 <div>
                     <Link className="flex gap-4 flex-col border" href={'group-list/${id}'}>
-                        <Image src="/img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover" />
+                        <img src="/img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover" />
                     </Link>
                     <div className="flex gap-1 flex-col">
                         <div className="flex justify-center border">
@@ -47,7 +47,7 @@ export default function GroupList() {
                 </div>
                 <div>
                     <a className="flex gap-4 flex-col border">
-                        <Image src="/img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover" />
+                        <img src="/img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover" />
                     </a>
                     <div className="flex gap-1 flex-col">
                         <div className="flex justify-center border">

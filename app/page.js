@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   const list = [
-    { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
+    { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["../img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
     { id: 2, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test4.jpg" ] },
     { id: 3, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
     { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
@@ -22,7 +22,7 @@ export default function Home() {
     { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
     { id: 2, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test4.jpg" ] },
     { id: 3, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-    { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
+    { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["../img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Home() {
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
-                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                      <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-gray-200 text-gray-700">
@@ -66,7 +66,7 @@ export default function Home() {
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
-                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                      <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-gray-200 text-gray-700">

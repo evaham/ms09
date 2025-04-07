@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import data from "../public/data/db.json";
 
 export default function Home() {
-
+  const data = require('/public/data/db.json')
   return (
     <div className="">
       <main className="flex flex-col p-2">
         <div className="mt-4 mb-2">진행중 공동구매</div>
         <div className="flex flex-col gap-4 mb-4">
           {data.list.map((item,index) => (
-            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
+            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
                 <div className="text-slate-500 line-clamp-1">{item.date}</div>
@@ -37,7 +36,7 @@ export default function Home() {
         <div className="mt-4 mb-2">진행예정 공동구매</div>
         <div className="flex flex-col gap-4 mb-4">
           {data.list2.map((item,index) => (
-            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
+            <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
                 <div className="text-slate-500 line-clamp-1">{item.date}</div>

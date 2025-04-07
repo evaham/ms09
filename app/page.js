@@ -2,35 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import data from "../public/data/db.json";
 
 export default function Home() {
-  const list = [
-    { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["../img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
-    { id: 2, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test4.jpg" ] },
-    { id: 3, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-    { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-  ];
-
-  const list2 = [
-    { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
-    { id: 2, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test4.jpg" ] },
-    { id: 3, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-    { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-  ];
-
-  const list3 = [
-    { id: 1, name: "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test5.jpg","/img/test5.jpg" ]},
-    { id: 2, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg","/img/test4.jpg" ] },
-    { id: 3, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["/img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-    { id: 4, name: "설 맞이 선물세트 기획전", date: "01.16(목)~01.23(목)", imgGroup: ["../img/test1.jpg","/img/test2.jpg","/img/test3.jpg","/img/test4.jpg" ] },
-  ];
 
   return (
     <div className="">
       <main className="flex flex-col p-2">
         <div className="mt-4 mb-2">진행중 공동구매</div>
-        <div className="flex flex-col gap-4">
-          {list.map((item,index) => (
+        <div className="flex flex-col gap-4 mb-4">
+          {data.list.map((item,index) => (
             <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
@@ -40,7 +21,7 @@ export default function Home() {
               <div className="flex">
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
-                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
+                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-slate-200">
                       <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (
@@ -54,8 +35,8 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-4 mb-2">진행예정 공동구매</div>
-        <div className="flex flex-col gap-4">
-          {list2.map((item,index) => (
+        <div className="flex flex-col gap-4 mb-4">
+          {data.list2.map((item,index) => (
             <Link key={index} className="flex gap-4 flex-col p-4 rounded-lg bg-white shadow dark:bg-slate-700" href={`/group-list/${item.id}`}>
               <div className="flex text-sm">
                 <div className="w-14 mr-2 rounded-full text-center bg-slate-600 text-slate-50 dark:bg-slate-500">D-7</div>
@@ -65,7 +46,7 @@ export default function Home() {
               <div className="flex">
                 {item.imgGroup.map((imgSrc, index) => (
                   index < 5 ? (
-                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full">
+                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-slate-200">
                       <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ) : (

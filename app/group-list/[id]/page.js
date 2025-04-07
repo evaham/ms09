@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image";
 
-export default function GroupList() {
+export default function GroupList({params}) {
 
 
     return (

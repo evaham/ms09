@@ -1,16 +1,24 @@
 // page number 121
+'use client'
+
+import ImageSlider from "@/app/component/imgslider";
 
 export default function GoodsInfo() {
     return (
-        <div>
-            <div>상품정보</div>
-            <div>
-            </div>
-            <div>
+        <div className="flex flex-col gap-2 p-4">
+            <p>상품정보</p>
+            {/* <div className="relative">
+                <div className="absolute top-1 left-1">남은시간 7일 12:20:45</div>
+                
+                <img src="../../img/test1.jpg" width={300} height={300} alt="상품 이미지" className=" w-full rounded-lg bg-gray-300 object-cover aspect-square" />
+            </div> */}
+            <ImageSlider />
+
+            <div className="p-2 rounded-lg bg-white">
                 <div>[동원]참치선물세트S-12호</div>
                 <div>29,000원</div>
             </div>
-            <div>
+            <div className="p-2 rounded-lg bg-white">
                 <div>38%달성</div>
                 <div className="overflow-hidden basis-full my-auto h-3 rounded-full bg-slate-50">
                     <div className="h-full bg-amber-300" style={{width:"80%"}}></div>
@@ -28,7 +36,7 @@ export default function GoodsInfo() {
                     <div>1개</div>
                 </div>
             </div>
-            <div>
+            <div className="p-2 rounded-lg bg-white">
                 <div>
                     <div>공동구매 신청기간</div>
                     <div>01.16(목)~01.23(목)</div>
@@ -38,7 +46,7 @@ export default function GoodsInfo() {
                     <div>01.16(목)~01.23(목)</div>
                 </div>
             </div>
-            <div>
+            <div className="p-2 rounded-lg bg-white">
                 설 명절 선물세트 기획전!<br />
                 상품구성 : 살코기참치 120g 12개입<br /><br />
 

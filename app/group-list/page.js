@@ -48,7 +48,7 @@ export default function GroupList() {
                 </div>
                 <div>
                     <a className="flex gap-4 flex-col border">
-                        <img src="/img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover bg-slate-300" />
+                        <img src="img/test1.jpg" width={100} height={100} alt="상품 이미지" className="w-full h-32 object-cover bg-slate-300" />
                     </a>
                     <div className="flex gap-1 flex-col">
                         <div className="flex justify-center border">

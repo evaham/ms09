@@ -59,9 +59,6 @@ export default function Home() {
           ))}
         </div>
 
-
-
-
       </main>
       <div className="fixed right-0 bottom-0">맨위로</div>
       <div className="fixed top-20 right-4 left-4 flex flex-col bg-slate-50 hidden">

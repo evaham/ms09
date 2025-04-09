@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 
 const CounterButton = () => {
@@ -14,7 +15,7 @@ const CounterButton = () => {
 	};
 
 	return (
-		<div className="relative  flex w-40 h-6 border bg-slate-700 rounded-full">
+		<div className="relative flex w-full h-6 border bg-slate-700 rounded-full">
 			<p className="absolute flex items-center justify-center inset-0">{count}</p>
 			<button onClick={handleDecrement} className="flex-1 flex justify-start ml-1 items-center z-10">
 				<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#e8eaed"><path d="M200-440v-80h560v80H200Z" /></svg>

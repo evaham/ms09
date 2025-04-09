@@ -7,7 +7,7 @@ export default function Home() {
   const data = require('/public/data/db.json')
   return (
     <div className="">
-      <main className="flex flex-col p-2">
+      <main className="flex flex-col p-4">
         <div className="mt-4 mb-2">진행중 공동구매</div>
         <div className="flex flex-col gap-4 mb-4">
           {data.list.map((item,index) => (

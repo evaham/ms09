@@ -1,5 +1,4 @@
 // page number 12
-'use client'
 
 import Link from "next/link"
 import Image from "next/image";
@@ -45,8 +44,10 @@ export default function GroupList() {
                                 </div>
                                 <div className="w-full h-10 leading-tight line-clamp-2">{item.name}</div>
                                 <div className="flex items-center">
-                                    <span className="basis-full font-bold">{item.price}</span>
-                                    <CounterButton />
+                                    <span className="flex-1 font-bold">{item.price}</span>
+                                    <div className="w-20 ml-auto">
+                                        <CounterButton />
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -18,25 +18,33 @@
     { "id": 4, "name": "설 맞이 선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["..img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg" ] }
   ],
   "goodslist":[
-    {"id":1,"name":"프리미엄 한우세트","price":"150,000원","rate":95, "goodsimg":"img/test1.jpg","totalpieces":100,"orderpieces":120},
-    {"id":2,"name":"유기농 과일 바구니","price":"50,000원","rate":90, "goodsimg":"img/test2.jpg","totalpieces":100,"orderpieces":50},
-    {"id":3,"name":"전통 한과 세트전통 한과 세트전통 한과 세트전통 한과 세트","price":"40,000원","rate":85, "goodsimg":"img/test3.jpg","totalpieces":100,"orderpieces":20},
-    {"id":4,"name":"수제 초콜릿 박스","price":"25,000원","rate":88, "goodsimg":"img/test4.jpg","totalpieces":100,"orderpieces":1200},
-    {"id":5,"name":"고급 와인 세트","price":"120,000원","rate":92, "goodsimg":"img/test5.jpg","totalpieces":100,"orderpieces":5},
-    {"id":6,"name":"건강 보조 식품 세트","price":"70,000원","rate":89, "goodsimg":"img/test6.jpg", "totalpieces":100,"orderpieces":2},
-    {"id":7,"name":"프리미엄 커피 세트","price":"35,000원","rate":87, "goodsimg":"img/test7.jpg,","totalpieces":100,"orderpieces":1},
-    {"id":8,"name":"고급 차 세트","price":"60,000원","rate":91, "goodsimg":"img/test8.jpg", "totalpieces":100,"orderpieces":0},
-    {"id":9,"name":"프리미엄 한우세트","price":"150,000원","rate":95, "goodsimg":"img/test1.jpg","totalpieces":100,"orderpieces":2000},
-    {"id":10,"name":"유기농 과일 바구니","price":"50,000원","rate":90, "goodsimg":"img/test2.jpg","totalpieces":100,"orderpieces":50},
-    {"id":11,"name":"전통 한과 세트","price":"40,000원","rate":85, "goodsimg":"img/test3.jpg","totalpieces":100,"orderpieces":20},
-    {"id":12,"name":"수제 초콜릿 박스","price":"25,000원","rate":88, "goodsimg":"img/test4.jpg","totalpieces":100,"orderpieces":10},
-    {"id":13,"name":"고급 와인 세트","price":"120,000원","rate":92, "goodsimg":"img/test5.jpg","totalpieces":100,"orderpieces":5},
-    {"id":14,"name":"건강 보조 식품 세트","price":"70,000원","rate":89, "goodsimg":"img/test6.jpg", "totalpieces":100,"orderpieces":2},
-    {"id":15,"name":"프리미엄 커피 세트","price":"35,000원","rate":87, "goodsimg":"img/test7.jpg", "totalpieces":100,"orderpieces":1},
-    {"id":16,"name":"고급 차 세트","price":"60,000원","rate":91, "goodsimg":"img/test8.jpg", "totalpieces":100,"orderpieces":0}
+    {"id":1,"name":"프리미엄 한우세트","price":"150,000","rate":95, "goodsimg":"img/test1.jpg","totalpieces":100,"orderpieces":120},
+    {"id":2,"name":"유기농 과일 바구니","price":"50,000","rate":90, "goodsimg":"img/test2.jpg","totalpieces":100,"orderpieces":50},
+    {"id":3,"name":"전통 한과 세트전통 한과 세트전통 한과 세트전통 한과 세트","price":"40,000","rate":85, "goodsimg":"img/test3.jpg","totalpieces":100,"orderpieces":20},
+    {"id":4,"name":"수제 초콜릿 박스","price":"25,000","rate":88, "goodsimg":"img/test4.jpg","totalpieces":100,"orderpieces":1200},
+    {"id":5,"name":"고급 와인 세트","price":"120,000","rate":92, "goodsimg":"img/test5.jpg","totalpieces":100,"orderpieces":5},
+    {"id":6,"name":"건강 보조 식품 세트","price":"70,000","rate":89, "goodsimg":"img/test6.jpg", "totalpieces":100,"orderpieces":2},
+    {"id":7,"name":"프리미엄 커피 세트","price":"35,000","rate":87, "goodsimg":"img/test7.jpg,","totalpieces":100,"orderpieces":1},
+    {"id":8,"name":"고급 차 세트","price":"60,000","rate":91, "goodsimg":"img/test8.jpg", "totalpieces":100,"orderpieces":0},
+    {"id":9,"name":"프리미엄 한우세트","price":"150,000","rate":95, "goodsimg":"img/test1.jpg","totalpieces":100,"orderpieces":2000},
+    {"id":10,"name":"유기농 과일 바구니","price":"50,000","rate":90, "goodsimg":"img/test2.jpg","totalpieces":100,"orderpieces":50},
+    {"id":11,"name":"전통 한과 세트","price":"40,000","rate":85, "goodsimg":"img/test3.jpg","totalpieces":100,"orderpieces":20},
+    {"id":12,"name":"수제 초콜릿 박스","price":"25,000","rate":88, "goodsimg":"img/test4.jpg","totalpieces":100,"orderpieces":10},
+    {"id":13,"name":"고급 와인 세트","price":"120,000","rate":92, "goodsimg":"img/test5.jpg","totalpieces":100,"orderpieces":5},
+    {"id":14,"name":"건강 보조 식품 세트","price":"70,000","rate":89, "goodsimg":"img/test6.jpg", "totalpieces":100,"orderpieces":2},
+    {"id":15,"name":"프리미엄 커피 세트","price":"35,000","rate":87, "goodsimg":"img/test7.jpg", "totalpieces":100,"orderpieces":1},
+    {"id":16,"name":"고급 차 세트","price":"60,000","rate":91, "goodsimg":"img/test8.jpg", "totalpieces":100,"orderpieces":0}
+  ],
+  "applylist":[
+    {"id":1,"name":"프리미엄 한우세트","price":"150,000","rate":95, "goodsimg":"img/test1.jpg","totalpieces":100,"orderpieces":120},
+    {"id":2,"name":"유기농 과일 바구니","price":"50,000","rate":90, "goodsimg":"img/test2.jpg","totalpieces":100,"orderpieces":50},
+    {"id":3,"name":"전통 한과 세트전통 한과 세트전통 한과 세트전통 한과 세트트전통 한과 세트","price":"40,000","rate":85, "goodsimg":"img/test3.jpg","totalpieces":100,"orderpieces":20},
+    {"id":4,"name":"수제 초콜릿 박스","price":"25,000","rate":88, "goodsimg":"img/test4.jpg","totalpieces":100,"orderpieces":1200},
+    {"id":5,"name":"고급 와인 세트","price":"120,000","rate":92, "goodsimg":"img/test5.jpg","totalpieces":100,"orderpieces":5},
+    {"id":6,"name":"건강 보조 식품 세트","price":"70,000","rate":89, "goodsimg":"img/test6.jpg", "totalpieces":100,"orderpieces":2},
+    {"id":7,"name":"프리미엄 커피 세트","price":"35,000","rate":87, "goodsimg":"img/test7.jpg", "totalpieces":100,"orderpieces":1},
+    {"id":8,"name":"고급 차 세트","price":"60,000","rate":91, "goodsimg":"img/test8.jpg", "totalpieces":100,"orderpieces":0}
   ]
-
-
 }
 
 

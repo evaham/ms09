@@ -1,5 +1,4 @@
 // page number 121
-'use client'
 
 import ImageSlider from "@/app/component/imgslider";
 

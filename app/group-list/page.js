@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image";
-import CounterButton from "../component/counterbutton";
+import CounterButton from "../component/countButton";
 import OrderButton from "../component/orderbutton";
 
 export default function GroupList() {
@@ -54,7 +54,7 @@ export default function GroupList() {
                     ))}
                 </li>
             </ul>
-            <OrderButton />
+            <OrderButton url={"/group-list/apply-list"} />
         </div>
     )
 }

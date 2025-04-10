@@ -1,16 +1,11 @@
 // page number 121
 
-import ImageSlider from "@/app/component/imgslider";
+import ImageSlider from "@/app/component/imgSlider";
 
 export default function GoodsInfo() {
     return (
         <div className="flex flex-col gap-2 p-4">
             <p>상품정보</p>
-            {/* <div className="relative">
-                <div className="absolute top-1 left-1">남은시간 7일 12:20:45</div>
-                
-                <img src="../../img/test1.jpg" width={300} height={300} alt="상품 이미지" className=" w-full rounded-lg bg-gray-300 object-cover aspect-square" />
-            </div> */}
             <ImageSlider />
 
             <div className="p-2 rounded-lg bg-white">

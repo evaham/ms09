@@ -1,7 +1,7 @@
 {
   
   "list": [
-    { "id": 1, "name": "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg","img/test5.jpg","img/test5.jpg" ]},
+    { "id": 1, "name": "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["img/test1.jpg","img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg","img/test4.jpg","img/test5.jpg","img/test5.jpg" ]},
     { "id": 2, "name": "설 맞이 선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg","img/test4.jpg" ] },
     { "id": 3, "name": "설 맞이 선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg" ] },
     { "id": 4, "name": "설 맞이 선물세트 기획전", "date": "01.16(목)~01.23(목)", "imgGroup": ["img/test1.jpg","img/test2.jpg","img/test3.jpg","img/test4.jpg" ] }

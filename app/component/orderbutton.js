@@ -3,14 +3,28 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
-const OrderButton = ({url}) => {
+const OrderButton = ({url,type}) => {
     
     return (
-        <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-200 dark:bg-slate-950 z-20">
-            <Link href={url} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-white dark:bg-slate-800">
-                <span className="text-xl font-bold">공동구매 신청</span>
-                <span className="text-sm">상품수량을 선택하세요</span>
-            </Link>
+        <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
+            {type === 'disabled' &&
+                <Link href={url} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight border-slate-300 bg-slate-200 text-slate-400">
+                    <span className="font-bold">공동구매 신청</span>
+                    <span className="text-sm">상품수량을 선택하세요</span>
+                </Link>
+            }
+            {type === 'active' && 
+                <Link href={url} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-slate-500 text-slate-50">
+                    <span className="font-bold">공동구매 신청</span>
+                    <span className="text-sm">상품수량을 선택하세요</span>
+                </Link>
+            }
+            {type === 'type3' && 
+                <Link href={url} className={`flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight ${active ? "bg-slate-500 text-slate-50" : "border-slate-300 bg-slate-200 text-slate-400"}`}>
+                    <span className="font-bold">공동구매 신청</span>
+                    <span className="text-sm">상품수량을 선택하세요</span>
+                </Link>            
+            }
         </div>
     );
 };

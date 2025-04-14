@@ -5,8 +5,9 @@ import UserInfoAgreeModal from './userInfoAgreeModal';
 
 
 const UserInfoInputModal = ({isOpen, onClose, popName}) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const closeModal = () => setIsModalOpen(false);
 
-    if (!isOpen) return null;
  
     const handleBackgroundClick = (e) => {
         if (e.target.id === e.currentTarget.id) {
@@ -14,9 +15,8 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
         }
     };
     
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    if (!isOpen) return null;
 
-    const closeModal = () => setIsModalOpen(false);
 
     return (
         <div id="userInfoInput" className="fixed inset-0 bg-slate-950/50 z-30" onClick={handleBackgroundClick}>
@@ -58,8 +58,6 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
             <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     )
-
-
 } 
 
 export default UserInfoInputModal;

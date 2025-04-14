@@ -1,4 +1,5 @@
 // page number 121
+'use client'
 
 import ImageSlider from "@/app/component/imgSlider";
 import TopButton from "@/app/component/topButton";

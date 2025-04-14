@@ -3,7 +3,6 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import Image from "next/image";
 import CounterButton from "../component/countButton";
 import TopButton from "../component/topButton";
 

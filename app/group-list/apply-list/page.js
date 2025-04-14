@@ -3,10 +3,8 @@
 
 import React, { useState } from 'react';
 import CounterButton from '@/app/component/countButton';
-import OrderButton from '@/app/component/orderButton';
-// import UserInfoAgreeModal from '@/app/component/userInfoAgreeModal';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
-import TopButton from '@/app/component/topButton';
+
 
 export default function ApplyList() {
     const data = require('/public/data/db.json')

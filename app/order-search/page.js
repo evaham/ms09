@@ -1,7 +1,6 @@
 // page number 11
 'use client'
 
-import OrderButton from "@/app/component/orderButton";
 import UserInfoAgreeModal from "@/app/component/userInfoAgreeModal";
 import React, { useState } from "react";
 import Link from "next/link";

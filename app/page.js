@@ -22,7 +22,7 @@ export default function Home() {
                 <div className="flex">
                   {item.imgGroup.slice(0, 5).map((imgSrc, index) => (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border border-slate-400 rounded-full bg-slate-200">
-                      <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ))}
                   {item.imgGroup.length > 5 && (
@@ -48,7 +48,7 @@ export default function Home() {
                 <div className="flex">
                   {item.imgGroup.slice(0, 5).map((imgSrc, index) => (
                     <div key={index} className="relative overflow-hidden flex items-center justify-center w-14 h-14 -mr-4 border rounded-full bg-slate-200">
-                      <img src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
+                      <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ))}
                   {item.imgGroup.length > 5 && (

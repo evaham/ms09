@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import CounterButton from "../component/countButton";
 import TopButton from "../component/topButton";
+import Image from "next/image";
 
 export default function GroupList() {
     const data = require('/public/data/db.json')
@@ -36,7 +37,7 @@ export default function GroupList() {
                     {data.goodslist.map((item, index) => (
                         <div key={index} className="flex flex-col ">
                             <Link href={`/group-list/goods-Info`}>
-                                <img src={item.goodsimg} width={300} height={300} alt="상품 이미지" className=" w-full rounded-lg bg-gray-300 object-cover aspect-square" />
+                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className=" w-full rounded-lg bg-gray-300 object-cover aspect-square" />
                             </Link>
                             <div className="flex gap-2 flex-col">
                                 <div className="flex items-center mt-1">

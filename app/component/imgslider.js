@@ -2,6 +2,7 @@
 'use client';
 
 import { useState, useRef } from 'react';
+import Image from 'next/image';
 
 const images = ['/img/image1.jpg','/img/image2.jpg','/img/image3.jpg',];
 
@@ -41,7 +42,7 @@ const ImageSlider = () => {
             <div className="absolute top-2 left-2 flex items-center justify-center w-36 h-5 bg-slate-900/50 rounded-full text-xs text-white z-10">남은시간 7일 12:20:45</div>
             <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `${images.length * 100}%`, }}>
                 {images.map((src, index) => (
-                    <img key={index} src={src} width={300} height={300} alt="상품 이미지" className="w-full rounded-lg bg-gray-300 object-cover aspect-square" style={{ flex: '0 0 100%' }} />
+                    <Image key={index} src={src} width={300} height={300} alt="상품 이미지" className="w-full rounded-lg bg-gray-300 object-cover aspect-square" style={{ flex: '0 0 100%' }} />
                 ))}
             </div>
             <div className="absolute bottom-2 flex space-x-2">

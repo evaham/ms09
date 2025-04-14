@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import CounterButton from '@/app/component/countButton';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
+import Image from 'next/image';
 
 
 export default function ApplyList() {
@@ -22,7 +23,7 @@ export default function ApplyList() {
                 {data.applylist.map((item, index) => (
                     <li key={index}>
                         <div className="flex gap-2 p-4 rounded-lg bg-white">
-                            <img src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 rounded-lg bg-gray-300 object-cover aspect-square" />
+                            <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 rounded-lg bg-gray-300 object-cover aspect-square" />
                             <div className="relative flex-1 flex flex-col rounded-lg">
                                 <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                 <div className="flex mt-auto">

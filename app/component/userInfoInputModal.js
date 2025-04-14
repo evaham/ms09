@@ -1,21 +1,24 @@
 'use client'
 import React, { useState } from 'react';
+import UserInfoAgreeModal from './userInfoAgreeModal';
 
 
-const UserInfoInputModal = () => {
-
-    const [isOpen, onClose] = useState(true);
+const UserInfoInputModal = ({isOpen, onClose, popName}) => {
 
     if (!isOpen) return null;
-
+ 
     const handleBackgroundClick = (e) => {
-        if (e.target.id === 'modalContainer') {
+        if (e.target.id === e.currentTarget.id) {
             onClose(false);
         }
     };
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const closeModal = () => setIsModalOpen(false);
 
     return (
-        <div id="modalContainer" className="fixed inset-0 bg-slate-950/50 z-30" onClick={handleBackgroundClick}>
+        <div id="userInfoInput" className="fixed inset-0 bg-slate-950/50 z-30" onClick={handleBackgroundClick}>
             <div className="absolute bottom-0 left-0 right-0 mx-2 p-4 pb-8 rounded-t-2xl bg-white ">
                 
                 <p>고객정보</p>
@@ -41,7 +44,7 @@ const UserInfoInputModal = () => {
                 </ul>
                 <div>
                     <input type="checkbox" alt="" className="w-4 h-4" />
-                    <label className="text-sm">개인정보 수집 및 이용 동의</label>  
+                    <label className="text-sm">공동구매 신청 및 <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="border" >개인정보 수집 및 이용 동의</button>에 동의합니다.</label>  
                 </div>
                 <div className="flex">
                     <button className="flex-1 border">취소</button>
@@ -51,6 +54,7 @@ const UserInfoInputModal = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                 </button>
             </div>
+            <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     )
 

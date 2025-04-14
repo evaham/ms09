@@ -1,17 +1,25 @@
 // page number 122
+'use client'
 
+import React, { useState } from 'react';
 import CounterButton from '@/app/component/countButton';
 import OrderButton from '@/app/component/orderButton';
-import UserInfoAgreeModal from '@/app/component/userInfoAgreeModal';
+// import UserInfoAgreeModal from '@/app/component/userInfoAgreeModal';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
+import TopButton from '@/app/component/topButton';
 
 export default function ApplyList() {
     const data = require('/public/data/db.json')
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const closeModal = () => setIsModalOpen(false);
+
+
     return (
-        <div className="p-4">
-            <p>공동구매 신청</p>
-            <p>설 맞이 선물세트 기획전</p>
+        <div className="flex flex-col p-4">
+            <p className="mt-2 font-bold text-lg">공동구매 신청</p>
+            <p className="my-2">설 맞이 선물세트 기획전</p>
             <ul className="flex flex-col gap-2 mb-4">
                 {data.applylist.map((item, index) => (
                     <li key={index}>
@@ -44,9 +52,13 @@ export default function ApplyList() {
                 </div>
                 <span className="text-xs">※ 실 결제는 상품 수령기간 내 매장에 방문 후 결제해주세요.</span>
             </div>
-            <OrderButton url={"/"} />
-            <UserInfoInputModal isOpen={true} />
-            <UserInfoAgreeModal isOpen={true}/>
+
+            <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
+                <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tightbg bg-slate-500">
+                    <span className="text-lg font-bold">총 <span>00</span>건 공동구매 신청</span>
+                </button>
+            </div>
+            <UserInfoInputModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     );
 }

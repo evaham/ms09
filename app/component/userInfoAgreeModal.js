@@ -2,19 +2,18 @@
 
 import React, { useState } from 'react';
 
-const UserInfoAgreeModal = () => {
-    const [isOpen, onClose] = useState(true);
-
+const UserInfoAgreeModal = ({isOpen,onClose}) => {
     if (!isOpen) return null;
-
+ 
     const handleBackgroundClick = (e) => {
-        if (e.target.id === 'modalContainer') {
+        if (e.target.id === e.currentTarget.id) {
             onClose(false);
         }
     };
 
+
     return (
-        <div id="modalContainer" className="fixed inset-0 flex flex-col items-center justify-center p-2 pt-14 bg-slate-950/50 z-30" onClick={handleBackgroundClick} >
+        <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-4 pt-14 bg-slate-950/50 z-30" onClick={handleBackgroundClick} >
             <div className="relative flex flex-col w-full h-10/12 p-4 rounded-2xl bg-white overflow-hidden">
                 <p className="text-lg font-bold">개인정보 수집·이용 동의서</p>
                 <div className="flex-1 overflow-y-auto p-2 border border-slate-100">

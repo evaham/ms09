@@ -1,15 +1,22 @@
 // page number 11
+'use client'
 
 import OrderButton from "@/app/component/orderButton";
+import UserInfoAgreeModal from "@/app/component/userInfoAgreeModal";
+import React, { useState } from "react";
+import Link from "next/link";
 
 export default function OrederSearch() {
     const propLink = '/order-search/order-list'
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const closeModal = () => setIsModalOpen(false);
+
     return (
         <div className="flex flex-col p-4">
-            <div>
-                <p>고객정보</p>
-                <p>공동구매 신청 시 입력한 정보를 입력해주세요.</p>
-            </div>
+            <p className="my-2 font-bold text-lg">고객정보</p>
+            <p className="my-2">공동구매 신청 시 입력한 정보를 입력해주세요.</p>
             <div className="flex flex-col rounded-2xl bg-white">
                 <div className="flex flex-col p-4">
                     <label>닉네임 (한글, 영문, 숫자만 입력가능)</label>
@@ -23,8 +30,16 @@ export default function OrederSearch() {
                     </div>
                 </div>
             </div>
-            <button type="button" className="ml-auto">개인정보 수집·이용 확인하기</button>
-            <OrderButton url={propLink} />
+            <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="ml-auto">개인정보 수집·이용 확인하기</button>
+            <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
+
+
+            <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
+                <Link href={"/order-search/order-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight border-slate-300 bg-slate-200 text-slate-400">
+                    <span className="text-lg font-bold">나의 신청내역 보기</span>
+                </Link>
+            </div>
+
         </div>
     );
 }

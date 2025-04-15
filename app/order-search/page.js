@@ -32,13 +32,11 @@ export default function OrederSearch() {
             <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="ml-auto">개인정보 수집·이용 확인하기</button>
             <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
 
-
             <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
-                <Link href={"/order-search/order-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight border-slate-300 bg-slate-200 text-slate-400">
+                <Link href={"/order-search/order-list"} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center bg-teal-500 text-white">
                     <span className="text-lg font-bold">나의 신청내역 보기</span>
                 </Link>
             </div>
-
         </div>
     );
 }

@@ -10,7 +10,7 @@ export default function Home() {
     <div className="">
       <main className="flex flex-col p-4">
         <p className="my-2">진행중 공동구매</p>
-        <ul className="flex flex-col gap-4 mb-4">
+        <ul className="flex flex-col gap-2 mb-4">
           {data.list.map((item, index) => (
             <li key={index}>
               <Link className="flex gap-4 flex-col w-full p-4 rounded-lg bg-white shadow" href={`/group-list/`}>
@@ -61,6 +61,9 @@ export default function Home() {
             </li>
           ))}
         </ul>
+        <div className="flex flex-col items-center justify-center w-full h-48 p-4 bg-gray-300 rounded-lg">
+          <p className="font-bold text-slate-600">현재 진행중인 공동구매가 없습니다.</p>
+        </div>
       </main>
 
       <TopButton isButton={false} />

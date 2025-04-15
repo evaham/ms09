@@ -17,7 +17,7 @@ export default function OrderList() {
         <div className="flex flex-col p-4">
             <p className="my-t text-lg font-bold">홍길동(010-1234-5678)님의 신청내역</p>
             <p className="my-2">각 내역을 선택 시 상세보기로 이동합니다.</p>
-            <ul className="flex flex-col gap-4 mb-4">
+            <ul className="flex flex-col gap-2 mb-4">
                 {data.orderlist.map((item, index) => (
                     <li key={index}>
                         <div onClick={() => setIsModalOpen(!isModalOpen)} className="flex gap-2 flex-col w-full p-4 rounded-lg bg-white shadow">
@@ -27,7 +27,7 @@ export default function OrderList() {
                     </li>
                 ))}
             </ul>
-            <OrderDetailModal  isOpen={isModalOpen} onClose={closeModal} />
+            <OrderDetailModal isOpen={isModalOpen} onClose={closeModal} />
             <TopButton isButton={false} />
         </div>
     );

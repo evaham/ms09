@@ -9,7 +9,7 @@ export default function GoodsInfo() {
         <div className="flex flex-col p-4">
             <p className="my-2 font-bold text-lg">상품정보</p>
             <ImageSlider />
-            <div className="flex flex-col gap-4 mt-4">
+            <div className="flex flex-col gap-2 mt-4">
                 <div className="p-2 rounded-lg bg-white ">
                     <p>[동원]참치선물세트S참치선물세트S참치선물세트S참치선물세트S-12호</p>
                     <p><span className="text-lg font-bold">29,000</span> 원</p>

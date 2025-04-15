@@ -19,7 +19,7 @@ export default function GroupList() {
     return (
         <div className="flex flex-col p-4">
             <div className="flex justify-center items-center h-12 bg-slate-200 rounded-full font-bold text-xl">
-                <div><span className="mr-2">공구마감</span> 07일 12:20:45</div>
+                <div><span className="mr-2">신청마감</span> 07일 12:20:45</div>
             </div>
             <div className="flex flex-col my-4">
                 <div className="font-bold text-lg">설맞이 선물세트 기획전</div>
@@ -67,13 +67,13 @@ export default function GroupList() {
             <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
                 {type === 'disabled' &&
                     <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight border-slate-300 bg-slate-200 text-slate-400">
-                        <span className="font-bold">a공동구매 신청</span>
+                        <span className="font-bold">공동구매 신청</span>
                         <span className="text-sm">상품수량을 선택하세요</span>
                     </button>
                 }
                 {type === 'active' && 
                     <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-slate-500 text-slate-50">
-                        <span className="text font-bold">b공동구매 신청</span>
+                        <span className="text font-bold">공동구매 신청</span>
                     </Link>
                 }
             </div>

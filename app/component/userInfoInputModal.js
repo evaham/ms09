@@ -23,11 +23,11 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
             <div className="absolute bottom-0 left-0 right-0 mx-4 p-4 pb-8 rounded-t-2xl bg-white ">
                 <p className="font-bold">고객정보</p>
                 <div className='mt-2'>
-                    <label className="text-sm">닉네임 (한글, 영문, 숫자만 입력가능)</label>
+                    <label className="text-sm text-slate-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
                     <input type="text" placeholder="이름" className="w-full p-2 border border-slate-500 rounded focus:outline-none focus:border-teal-500" />
                 </div>
                 <div className="mt-2">
-                    <label className="text-sm">휴대번호 (숫자만 입력 가능)</label>
+                    <label className="text-sm text-slate-500">휴대번호 (숫자만 입력 가능)</label>
                     <div className="relative flex">
                         <span className="absolute flex items-center h-full px-3">010 -</span>
                         <input type="text" placeholder="1234-5678" className="flex-1 flex items-center p-2 pl-16 border border-slate-500 rounded focus:outline-none focus:border-teal-500" />
@@ -44,7 +44,7 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                 </ul>
                 <hr className="my-4 border-slate-300" />
                 <div className='flex items-center mb-10'>
-                    <label className="text-sm text-gray-500"><span onClick={() => setIsModalOpen(!isModalOpen)} className="underline" >개인정보 수집 및 이용 동의</span><span className='text-teal-600'>(필수)</span></label>  
+                    <label className="text-sm text-slate-500"><span onClick={() => setIsModalOpen(!isModalOpen)} className="underline" >개인정보 수집 및 이용 동의</span><span className='text-teal-600'>(필수)</span></label>  
                     <input type="checkbox" alt="" className="w-6 h-6 ml-auto" />
                 </div>
                 <div className="flex gap-2 items-center justify-between mt-4">

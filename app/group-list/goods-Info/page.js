@@ -18,8 +18,8 @@ export default function GoodsInfo() {
                     <div className="flex items-center justify-center w-18 h-5 rounded-full text-xs bg-slate-200">
                         <span>100%</span>달성
                     </div>
-                    <div className=" overflow-hidden w-full my-auto h-3 rounded-full bg-blue-300/50">
-                        <div className="h-full bg-blue-500" style={{width:"80%"}}></div>
+                    <div className=" overflow-hidden w-full my-auto h-3 rounded-full bg-teal-900/15">
+                        <div className="h-full bg-teal-500" style={{width:"80%"}}></div>
                     </div>
                     <div className="flex flex-col mt-1 text-sm">
                         <dl className="flex">

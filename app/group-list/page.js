@@ -41,7 +41,7 @@ export default function GroupList() {
                             </Link>
                             <div className="flex gap-2 flex-col">
                                 <div className="flex items-center mt-1">
-                                    <div className="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-gray-300">
+                                    <div className="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
                                         <div className="flex items-center justify-center h-full rounded-3 bg-teal-500" style={{width: `${Math.min((item.orderpieces / item.totalpieces) * 100, 100)}%`}}>
                                             {(item.orderpieces / item.totalpieces) * 100 > 100 && (
                                                 <span className="text-white text-xs">목표달성</span>

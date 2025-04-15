@@ -10,11 +10,11 @@ export default function GoodsInfo() {
             <p className="my-2 font-bold text-lg">상품정보</p>
             <ImageSlider />
             <div className="flex flex-col gap-2 mt-4">
-                <div className="p-2 rounded-lg bg-white ">
+                <div className="p-4 rounded-lg bg-white ">
                     <p>[동원]참치선물세트S참치선물세트S참치선물세트S참치선물세트S-12호</p>
                     <p><span className="text-lg font-bold">29,000</span> 원</p>
                 </div>
-                <div className="flex flex-col gap-2 p-2 rounded-lg bg-white">
+                <div className="flex flex-col gap-2 p-4 rounded-lg bg-white">
                     <div className="flex items-center justify-center w-18 h-5 rounded-full text-xs bg-slate-200">
                         <span>100%</span>달성
                     </div>
@@ -36,7 +36,7 @@ export default function GoodsInfo() {
                         </dl>
                     </div>
                 </div>
-                <div className="flex flex-col p-2 rounded-lg text-sm bg-white">
+                <div className="flex flex-col p-4 rounded-lg text-sm bg-white">
                     <dl className="flex">
                         <dt>공동구매 신청기간</dt>
                         <dd className="ml-auto">01.16(목)~01.23(목)</dd>
@@ -46,7 +46,7 @@ export default function GoodsInfo() {
                         <dd className="ml-auto">01.16(목)~01.23(목)</dd>
                     </dl>
                 </div>
-                <div className="p-2 rounded-lg bg-white">
+                <div className="p-4 rounded-lg bg-white">
                     설 명절 선물세트 기획전!<br />
                     상품구성 : 살코기참치 120g 12개입<br /><br />
 

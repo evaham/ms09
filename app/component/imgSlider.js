@@ -7,7 +7,7 @@ import Image from 'next/image';
 const images = ['/img/image1.jpg','/img/image2.jpg','/img/image3.jpg',];
 
 const ImageSlider = () => {
-    const [currentIndex, setCurrentIndex] = useState(1);
+    const [currentIndex, setCurrentIndex] = useState(0);
     const startX = useRef(null);
 
     const nextSlide = () => {
@@ -39,7 +39,7 @@ const ImageSlider = () => {
 
     return (
         <div className="relative overflow-hidden flex items-center justify-center slider" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
-            <div className="absolute top-2 left-2 flex items-center justify-center w-36 h-5 bg-slate-900/50 rounded-full text-xs text-white z-10">남은시간 7일 12:20:45</div>
+            <div className="absolute top-2 left-2 flex items-center justify-center w-36 h-5 bg-teal-500 rounded-full text-xs text-white z-10">남은시간 7일 12:20:45</div>
             <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentIndex * 100}%)`, width: `${images.length * 100}%`, }}>
                 {images.map((src, index) => (
                     <Image key={index} src={src} width={300} height={300} alt="상품 이미지" className="w-full rounded-lg bg-gray-300 object-cover aspect-square" style={{ flex: '0 0 100%' }} />
@@ -47,7 +47,7 @@ const ImageSlider = () => {
             </div>
             <div className="absolute bottom-2 flex space-x-2">
                 {images.map((_, index) => (
-                    <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-blue-500' : 'bg-slate-600' }`}></span>
+                    <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-teal-500' : 'bg-slate-600/50' }`}></span>
                 ))}
             </div>
         </div>

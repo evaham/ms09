@@ -22,8 +22,8 @@ export default function ApplyList() {
             <ul className="flex flex-col gap-2 mb-4">
                 {data.applylist.map((item, index) => (
                     <li key={index}>
-                        <div className="flex gap-2 p-4 rounded-lg bg-white">
-                            <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 rounded-lg bg-gray-300 object-cover aspect-square" />
+                        <div className="flex gap-2 p-4 rounded-lg bg-white shadow">
+                            <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 border border-gray-300/50 object-cover aspect-square" />
                             <div className="relative flex-1 flex flex-col rounded-lg">
                                 <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                 <div className="flex mt-auto">
@@ -35,16 +35,16 @@ export default function ApplyList() {
                                     </div>
                                 </div>
     
-                                <button className="absolute -top-1 -right-1 fill-slate-600">
-                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                                <button className="absolute -top-0.5 -right-0.5 fill-slate-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                                 </button>
                             </div>
                         </div>
                     </li>
                 ))}
             </ul>
-            <hr />
-            <div className="mb-24 p-4 rounded-lg bg-white">
+            <hr className="my-4 border-gray-300" />
+            <div className="mb-24 p-4 rounded-lg bg-white shadow">
                 <div className="flex">
                     <div className="font-bold">총 결제 예상금액</div>
                     <div className="ml-auto"><span className="text-2xl font-bold mr-1">146,000</span>원</div>

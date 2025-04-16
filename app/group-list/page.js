@@ -76,7 +76,7 @@ export default function GroupList() {
                 }
                 {type === 'active' && 
                     <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-slate-50">
-                        <span className="text font-bold">공동구매 신청</span>
+                        <span className="text-lg font-bold">공동구매 신청</span>
                     </Link>
                 }
             </div>

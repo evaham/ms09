@@ -13,7 +13,7 @@ const UserInfoAgreeModal = ({isOpen,onClose}) => {
 
 
     return (
-        <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-4 pt-14 bg-slate-950/50 z-30" onClick={handleBackgroundClick} >
+        <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 bg-slate-950/50 z-30" onClick={handleBackgroundClick} >
             <div className="relative flex flex-col w-full h-10/12 p-4 rounded-2xl bg-white overflow-hidden">
                 <p className="text-lg font-bold">개인정보 수집·이용 동의서</p>
                 <div className="flex-1 overflow-y-auto p-2 border border-slate-100">
@@ -53,10 +53,8 @@ const UserInfoAgreeModal = ({isOpen,onClose}) => {
                     <br />
                     ② 개인정보 처리에 대한 문의는 고객센터를 통해 가능합니다.
                 </div>
-                <button className="absolute top-3 right-3 fill-slate-600" onClick={() => onClose(false)} >
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px">
-                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                    </svg>
+                <button className="absolute top-3 right-3 fill-gray-500" onClick={() => onClose(false)} >
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>
         </div>

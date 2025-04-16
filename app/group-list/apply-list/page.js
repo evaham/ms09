@@ -16,9 +16,9 @@ export default function ApplyList() {
 
 
     return (
-        <div className="flex flex-col p-4">
-            <p className="mt-2 font-bold text-lg">공동구매 신청</p>
-            <p className="my-2">설 맞이 선물세트 기획전</p>
+        <div className="flex flex-col p-3">
+            <p className="my-2 text-lg font-bold">공동구매 신청</p>
+            <p className="my-2 text-sm text-gray-500">설 맞이 선물세트 기획전</p>
             <ul className="flex flex-col gap-2 mb-4">
                 {data.applylist.map((item, index) => (
                     <li key={index}>

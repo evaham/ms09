@@ -6,25 +6,27 @@ import TopButton from "@/app/component/topButton";
 
 export default function GoodsInfo() {
     return (
-        <div className="flex flex-col p-4">
-            <p className="my-2 font-bold text-lg">상품정보</p>
-            <ImageSlider />
+        <div className="flex flex-col p-3">
+            <p className="mb-2 text-lg font-bold">상품정보</p>
+            <div className="-mx-3">
+                <ImageSlider />
+            </div>
             <div className="flex flex-col gap-2 mt-4">
                 <div className="p-4 rounded-lg bg-white ">
                     <p>[동원]참치선물세트S참치선물세트S참치선물세트S참치선물세트S-12호</p>
-                    <p><span className="text-lg font-bold">29,000</span> 원</p>
+                    <p><span className="text-2xl font-bold">29,000</span> 원</p>
                 </div>
                 <div className="flex flex-col gap-2 p-4 rounded-lg bg-white">
-                    <div className="flex items-center justify-center w-18 h-5 rounded-full text-xs bg-slate-200">
-                        <span>100%</span>달성
+                    <div className="flex items-center justify-center w-18 h-5 rounded-full text-xs bg-gray-200">
+                        <span>19%</span>&nbsp;달성
                     </div>
                     <div className=" overflow-hidden w-full my-auto h-3 rounded-full bg-teal-900/15">
-                        <div className="h-full bg-teal-500" style={{width:"80%"}}></div>
+                        <div className="h-full bg-teal-500" style={{width:"19%"}}></div>
                     </div>
                     <div className="flex flex-col mt-1 text-sm">
                         <dl className="flex">
                             <dt>달성량/목표수량</dt>
-                            <dd className="ml-auto">19/50개</dd>
+                            <dd className="ml-auto"><span className="font-bold">19</span>/100개</dd>
                         </dl>
                         <dl className="flex">
                             <dt>상품한정수량</dt>
@@ -55,10 +57,13 @@ export default function GoodsInfo() {
 
                     대량 구매문의 : 032-123-4567
                 </div>
-                <div className="mb-48">
-                    꼭 확인해 주세요!<br />
-                    목표 수량 미달성 시, 공동구매 종료 후 자동 취소 처리됩니다.<br />
-                    매장의 사정에 의해 중단 또는 변경될 수 있습니다.<br />
+                <hr className="my-4 border-gray-300" />
+                <div className="mb-48 text-sm px-4 text-gray-500">
+                    <p className="mb-1 font-bold">꼭 확인해 주세요!</p>
+                    <ul className="list-disc ml-4 text-sm">
+                        <li>목표 수량 미달성 시, 공동구매 종료 후 자동 취소 처리됩니다.</li>
+                        <li>매장의 사정에 의해 중단 또는 변경될 수 있습니다.</li>
+                    </ul>
                 </div>
 
 

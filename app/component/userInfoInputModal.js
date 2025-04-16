@@ -20,7 +20,7 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
 
     return (
         <div id="userInfoInput" className="fixed inset-0 bg-slate-950/50 z-30" onClick={handleBackgroundClick}>
-            <div className="absolute bottom-0 left-0 right-0 mx-4 p-4 pb-8 rounded-t-2xl bg-white ">
+            <div className="absolute bottom-0 left-0 right-0 mx-4 p-3 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="font-bold">고객정보</p>
                 <div className='mt-2'>
                     <label className="text-sm text-slate-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
@@ -51,11 +51,12 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                     <button className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-slate-600">취소</button>
                     <button className="flex-1 flex items-center justify-center h-10 rounded bg-teal-500 text-white">확인</button>
                 </div>
-                <button className="absolute top-3 right-3 fill-slate-600" onClick={() => onClose(false)}>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                <button className="absolute top-3 right-3 fill-gray-500" onClick={() => onClose(false)}>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>
             <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
+
         </div>
     )
 } 

@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, target-densityDpi=medium-dpi" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-50`} >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
         <NavMenu />
         {children}
       </body>

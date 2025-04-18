@@ -22,7 +22,7 @@ const OrderDetailModal = ({isOpen,onClose}) => {
                 <p className='mt-2 text-sm'>※ 상품 수령기간 : 01.24(금)~ 01.28(화)</p>
                 <div className="flex-1 overflow-y-auto -mx-4 p-4 border border-slate-100">
                     <ul className="flex flex-col gap-2">
-                        {data.orderlist.map((item, index) => (
+                        {data.page1111.map((item, index) => (
                             <li key={index}>
                                 <div className="flex gap-2 p-4 rounded-lg bg-white">
                                     <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-18 border border-gray-300/50 object-cover aspect-square" />

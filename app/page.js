@@ -11,7 +11,7 @@ export default function Home() {
       <main className="flex flex-col p-3">
         <p className="my-2 text-lg font-bold">진행중 공동구매</p>
         <ul className="flex flex-col gap-2 mb-4">
-          {data.list.map((item, index) => (
+          {data.page0001.map((item, index) => (
             <li key={index}>
               <Link className="relative overflow-hidden flex gap-2 flex-col w-full p-4 rounded-lg bg-white shadow" href={`/group-list/`}>
                 <div className="flex text-sm">
@@ -37,7 +37,7 @@ export default function Home() {
         </ul>
         <p className="my-2 text-lg font-bold">진행예정 공동구매</p>
         <ul className="flex flex-col gap-2 mb-4">
-          {data.list2.map((item, index) => (
+          {data.page0001_2.map((item, index) => (
             <li key={index}>
               <Link className="relative overflow-hidden flex gap-2 flex-col w-full p-4 rounded-lg bg-white shadow" href={`/group-list/`}>
                 <div className="flex text-sm">
@@ -66,7 +66,6 @@ export default function Home() {
           <p className="font-bold text-gray-600">현재 진행중인 공동구매가 없습니다.</p>
         </div>
       </main>
-
       <TopButton isButton={false} />
     </div>
   );

@@ -10,8 +10,6 @@ const UserInfoAgreeModal = ({isOpen,onClose}) => {
             onClose(false);
         }
     };
-
-
     return (
         <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 bg-slate-950/50 z-30" onClick={handleBackgroundClick} >
             <div className="relative flex flex-col w-full h-10/12 p-4 rounded-2xl bg-gray-50 overflow-hidden">

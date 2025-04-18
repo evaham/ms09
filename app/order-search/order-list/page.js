@@ -18,7 +18,7 @@ export default function OrderList() {
             <p className="my-t text-lg"><span className="font-bold text-teal-600">홍길동(010-1234-5678)</span>님의 신청내역</p>
             <p className="my-2 text-sm text-gray-500">• 각 내역을 선택 시 상세보기로 이동합니다.</p>
             <ul className="flex flex-col gap-2 mb-48">
-                {data.orderlist.map((item, index) => (
+                {data.page0111.map((item, index) => (
                     <li key={index}>
                         <div onClick={() => setIsModalOpen(!isModalOpen)} className="relative flex gap-1 flex-col w-full p-4 rounded-lg bg-white shadow">
                             <div className="pr-4 font-bold line-clamp-1">{item.name}</div>

@@ -34,7 +34,7 @@ export default function GroupList() {
             </div>
             <ul className="mb-48">
                 <li className="grid grid-cols-2 gap-2 gap-y-6">
-                    {data.goodslist.map((item, index) => (
+                    {data.page0012.map((item, index) => (
                         <div key={index} className="flex flex-col ">
                             <Link href={`/group-list/goods-Info`}>
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" />

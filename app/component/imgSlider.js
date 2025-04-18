@@ -4,7 +4,7 @@
 import { useState, useRef } from 'react';
 import Image from 'next/image';
 
-const images = ['/img/image1.jpg','/img/image2.jpg','/img/image3.jpg',];
+const images = ['../img/image1.jpg','../img/image2.jpg','../img/image3.jpg',];
 
 const ImageSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

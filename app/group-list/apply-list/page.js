@@ -20,7 +20,7 @@ export default function ApplyList() {
             <p className="my-2 text-lg font-bold">공동구매 신청</p>
             <p className="my-2 text-sm text-gray-500">설 맞이 선물세트 기획전</p>
             <ul className="flex flex-col gap-2 mb-4">
-                {data.applylist.map((item, index) => (
+                {data.page0121.map((item, index) => (
                     <li key={index}>
                         <div className="flex gap-2 p-4 rounded-lg bg-white shadow">
                             <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 border border-gray-300/50 object-cover aspect-square" />

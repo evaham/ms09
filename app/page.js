@@ -8,7 +8,7 @@ export default function Home() {
   const data = require('/public/data/db.json')
   return (
     <div className="">
-      <main className="flex flex-col p-3">
+      <div className="flex flex-col p-3">
         <p className="my-2 text-lg font-bold">진행중 공동구매</p>
         <ul className="flex flex-col gap-2 mb-4">
           {data.page0001.map((item, index) => (
@@ -62,10 +62,10 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className="flex flex-col items-center justify-center w-full h-48 p-4 bg-teal-700/10 rounded-lg z-30">
+        <div className="flex flex-col items-center justify-center w-full h-48 p-4 bg-teal-700/10 rounded-lg">
           <p className="font-bold text-gray-600">현재 진행중인 공동구매가 없습니다.</p>
         </div>
-      </main>
+      </div>
       <TopButton isButton={false} />
     </div>
   );

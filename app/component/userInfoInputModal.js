@@ -21,7 +21,7 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
     return (
         <div id="userInfoInput" className="fixed inset-0 bg-gray-950/50 z-30" onClick={handleBackgroundClick}>
             <div className="absolute bottom-0 left-0 right-0 mx-4 p-3 pb-8 rounded-t-2xl bg-white slide-top">
-                <p className="font-bold">고객정보</p>
+                <p className="my-2 font-bold">고객정보</p>
                 <div className='flex flex-col mt-2'>
                     <label className="text-sm text-gray-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
                     <input type="text" placeholder="이름" className="flex-1 flex p-2 items-center border border-gray-300 rounded focus:outline-none focus:border-teal-500" />

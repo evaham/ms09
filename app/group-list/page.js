@@ -17,27 +17,35 @@ export default function GroupList() {
 
 
     return (
-        <div className="flex flex-col p-3 bg-white">
-            <div className="flex justify-center items-center h-10 border border-teal-500/20 bg-teal-500/10 rounded-full font-bold text-xl">
-                <div><span className="mr-2">신청마감</span> <span>07일 12:20:45</span></div>
-            </div>
-            <div className="flex flex-col my-4">
-                <div className="mb-2 text-lg font-bold">설맞이 선물세트 기획전</div>
-                <div className="flex text-sm text-gray-500">
-                    <span>• 공동구매 신청기간</span>
-                    <span className="ml-auto">01.16(목)~1.23(목)</span>
+        <div>
+            <div className="flex flex-col p-3 bg-white">
+                <div className="flex justify-center items-center h-10 border border-teal-500/20 bg-teal-500/10 rounded-full font-bold text-xl">
+                    <span className="mr-2">신청마감</span> <span>07일 12:20:45</span>
                 </div>
-                <div className="flex text-sm text-gray-500">
-                    <span>• 상품 수령기간</span>
-                    <span className="ml-auto">01.16(목)~1.23(목)</span>
+                <div className="flex flex-col my-4">
+                    <div className="my-2 text-lg font-bold">설맞이 선물세트 기획전</div>
+                    <div className="flex text-sm text-gray-500">
+                        <span>• 공동구매 신청기간</span>
+                        <span className="ml-auto">01.16(목)~1.23(목)</span>
+                    </div>
+                    <div className="flex text-sm text-gray-500">
+                        <span>• 상품 수령기간</span>
+                        <span className="ml-auto">01.16(목)~1.23(목)</span>
+                    </div>
                 </div>
-            </div>
-            <ul className="mb-48">
-                <li className="grid grid-cols-2 gap-2 gap-y-6">
+                <ul className="grid grid-cols-2 gap-2 gap-y-6 mb-48">
                     {data.page0012.map((item, index) => (
-                        <div key={index} className="flex flex-col ">
-                            <Link href={`/group-list/goods-Info`}>
-                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" />
+                        <li key={index} className="flex flex-col ">
+                            <Link href={`/group-list/goods-Info`} className="relative overflow-hidden rounded-xl border border-gray-200/50 ">
+                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-gray-300 object-cover aspect-square" />
+                                <div className="absolute top-2 left-2 flex text-xs">
+                                    {item.tag.map((i) => (
+                                        <span key={i} className='flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white'>{i}</span>
+                                    ))}
+                                </div>
+                                {item.active === false &&
+                                    <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-2xl font-bold text-white'>마 감</div>
+                                }
                             </Link>
                             <div className="flex gap-1 px-1 flex-col">
                                 <div className="flex items-center mt-1">
@@ -57,29 +65,42 @@ export default function GroupList() {
                                         <span className="text-xs">원</span>
                                     </p>
                                     <div className="w-18 ml-auto">
-                                        <CounterButton />
+                                        {item.active === true &&
+                                            <CounterButton  />
+                                        }
+                                        {item.active === false &&
+                                            <div className="relative flex w-full h-6">
+                                                <button className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-gray-400"><path d="M200-440v-80h560v80H200Z" /></svg>
+                                                </button>
+                                                <p className="flex-1 flex items-center justify-center inset-0 mx-0.5 text-sm text-gray-300">0</p>
+                                                <button className="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-gray-400"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg>
+                                                </button>
+                                            </div>
+                                        }
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </li>
                     ))}
-                </li>
-            </ul>
-            <TopButton isButton={true} />
+                </ul>
 
-            <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
-                {type === 'disabled' &&
-                    <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-slate-200 text-slate-500">
-                        <span className="font-bold">공동구매 신청</span>
-                        <span className="text-sm">상품수량을 선택하세요</span>
-                    </button>
-                }
-                {type === 'active' && 
-                    <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-slate-50">
-                        <span className="text-lg font-bold">공동구매 신청</span>
-                    </Link>
-                }
+                <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
+                    {type === 'disabled' &&
+                        <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-slate-200 text-slate-500">
+                            <span className="font-bold">공동구매 신청</span>
+                            <span className="text-sm">상품수량을 선택하세요</span>
+                        </button>
+                    }
+                    {type === 'active' && 
+                        <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-slate-50">
+                            <span className="text-lg font-bold">공동구매 신청</span>
+                        </Link>
+                    }
+                </div>
             </div>
+            <TopButton isButton={true} />
         </div>
     )
 }

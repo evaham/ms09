@@ -7,24 +7,19 @@ import Image from 'next/image';
 const OrderDetailModal = ({isOpen,onClose}) => {
     const data = require('/public/data/db.json')
     if (!isOpen) return null;
- 
-    const handleBackgroundClick = (e) => {
-        if (e.target.id === e.currentTarget.id) {
-            onClose(false);
-        }
-    };
 
 
     return (
-        <div id='orederDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 bg-slate-950/50 z-30" onClick={handleBackgroundClick}>
+        <div id='orderDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 z-30">
+            <div className="absolute inset-0 bg-gray-950/50" onClick={() => onClose(false)}></div>
             <div className="relative flex flex-col w-full h-10/12 p-4 rounded-2xl bg-gray-50 overflow-hidden">
                 <p className="text-lg font-bold">설 맞이 선물세트 기획전</p>
                 <p className='mt-2 text-sm'>※ 상품 수령기간 : 01.24(금)~ 01.28(화)</p>
-                <div className="flex-1 overflow-y-auto -mx-4 p-4 border border-slate-100">
+                <div className="flex-1 overflow-y-auto -mx-4 p-4">
                     <ul className="flex flex-col gap-2">
                         {data.page1111.map((item, index) => (
                             <li key={index}>
-                                <div className="flex gap-2 p-4 rounded-lg bg-white">
+                                <div className="flex gap-2 p-4 rounded-lg bg-white shadow">
                                     <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-18 border border-gray-300/50 object-cover aspect-square" />
                                     <div className="relative flex-1 flex flex-col rounded-lg">
                                         <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>

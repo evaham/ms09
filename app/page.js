@@ -62,7 +62,7 @@ export default function Home() {
             </li>
           ))}
         </ul>
-        <div className="flex flex-col items-center justify-center w-full h-48 p-4 bg-teal-700/10 rounded-lg">
+        <div className="flex flex-col items-center justify-center w-full h-48 p-4 bg-gray-800/10 rounded-lg">
           <p className="font-bold text-gray-600">현재 진행중인 공동구매가 없습니다.</p>
         </div>
       </div>

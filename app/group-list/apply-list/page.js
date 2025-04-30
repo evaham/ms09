@@ -32,7 +32,7 @@ export default function ApplyList() {
                                             <CounterButton />
                                         </div>
                                     </div>
-                                    <button className="absolute -top-0.5 -right-0.5 fill-slate-500">
+                                    <button className="absolute -top-0.5 -right-0.5 fill-gray-500">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                                     </button>
                                 </div>
@@ -53,7 +53,7 @@ export default function ApplyList() {
                 </ul>
 
 
-                <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-slate-100 z-20">
+                <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
                     <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white">
                         <span className="text-lg font-bold">총 <span>00</span>건 공동구매 신청</span>
                     </button>

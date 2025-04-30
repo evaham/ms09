@@ -21,10 +21,9 @@ export default function OrderList() {
                             <div onClick={() => setIsModalOpen(!isModalOpen)} className="relative flex gap-1 flex-col w-full p-4 rounded-lg bg-white shadow">
                                 <div className="pr-4 font-bold line-clamp-1">{item.name}</div>
                                 <span className="text-sm text-gray-500">{item.date}</span>
-                                <div className="position absolute right-2 top-0 bottom-0 flex items-center justify-center fill-slate-500">
+                                <div className="position absolute right-2 top-0 bottom-0 flex items-center justify-center fill-gray-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg>
                                 </div>
-
                             </div>
                         </li>
                     ))}

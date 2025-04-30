@@ -8,19 +8,14 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const closeModal = () => setIsModalOpen(false);
 
- 
-    const handleBackgroundClick = (e) => {
-        if (e.target.id === e.currentTarget.id) {
-            onClose(false);
-        }
-    };
-    
+     
     if (!isOpen) return null;
 
 
     return (
-        <div id="userInfoInput" className="fixed inset-0 bg-gray-950/50 z-30" onClick={handleBackgroundClick}>
-            <div className="absolute bottom-0 left-0 right-0 mx-4 p-3 pb-8 rounded-t-2xl bg-white slide-top">
+        <div id="userInfoInput" className="fixed inset-0 z-30">
+            <div className="absolute inset-0 bg-gray-950/50" onClick={() => onClose(false)}></div>
+            <div className="absolute bottom-0 left-0 right-0 mx-3 p-4 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="my-2 font-bold">고객정보</p>
                 <div className='flex flex-col mt-2'>
                     <label className="text-sm text-gray-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
@@ -48,15 +43,14 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                     <input type="checkbox" alt="" className="w-6 h-6 ml-auto" />
                 </div>
                 <div className="flex gap-2 items-center justify-between mt-4">
-                    <button className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600">취소</button>
+                    <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600">취소</button>
                     <button className="flex-1 flex items-center justify-center h-10 rounded bg-teal-500 text-white">확인</button>
                 </div>
-                <button className="absolute top-3 right-3 fill-gray-500" onClick={() => onClose(false)}>
+                <button onClick={() => onClose(false)} className="absolute top-3 right-3 fill-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>
             <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
-
         </div>
     )
 } 

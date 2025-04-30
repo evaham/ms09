@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="./output.css" data-precedence="next_static/css/app/layout.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MS공동구매</title>
+    <title>0012</title>
     <meta name="description" content="공동구매 페이지" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16" />
     <script src="./comm.js"></script>
@@ -20,11 +20,11 @@
         </a>
         <div class="flex items-center h-full mr-auto" onclick="layerPopup(1)">
             <span class="max-w-10/12 mr-1 text-lg font-bold line-clamp-1">투게더 할인 마트</span>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-slate-500">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" class="fill-gray-500">
                 <path d="M460-300h40v-220h-40v220Zm20-276.92q10.46 0 17.54-7.08 7.08-7.08 7.08-17.54 0-10.46-7.08-17.54-7.08-7.07-17.54-7.07-10.46 0-17.54 7.07-7.08 7.08-7.08 17.54 0 10.46 7.08 17.54 7.08 7.08 17.54 7.08Zm.13 456.92q-74.67 0-140.41-28.34-65.73-28.34-114.36-76.92-48.63-48.58-76.99-114.26Q120-405.19 120-479.87q0-74.67 28.34-140.41 28.34-65.73 76.92-114.36 48.58-48.63 114.26-76.99Q405.19-840 479.87-840q74.67 0 140.41 28.34 65.73 28.34 114.36 76.92 48.63 48.58 76.99 114.26Q840-554.81 840-480.13q0 74.67-28.34 140.41-28.34 65.73-76.92 114.36-48.58 48.63-114.26 76.99Q554.81-120 480.13-120Zm-.13-40q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"></path>
             </svg>
         </div>
-        <a class="flex items-center justify-center w-12 h-full ml-auto fill-slate-500" href="./page0011.html">
+        <a class="flex items-center justify-center w-12 h-full ml-auto fill-gray-500" href="./page0011.html">
             <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px">
                 <path d="M200-800v253.31-1V-160v-640 160-160Zm100 380h143.85q5.92-11.46 12.77-21.08 6.84-9.61 14.61-18.92H300v40Zm0 160h115.46q-1.92-10-2.65-20t-.27-20H300v40Zm-75.38 140q-27.62 0-46.12-18.5Q160-157 160-184.62v-590.76q0-27.62 18.5-46.12Q197-840 224.62-840H540l180 180v120.77q-9.77-3.39-19.77-4.81-10-1.42-20.23-2.65V-640H520v-160H224.62q-9.24 0-16.93 7.69-7.69 7.69-7.69 16.93v590.76q0 9.24 7.69 16.93 7.69 7.69 16.93 7.69h231q7.53 11.69 16.76 21.42 9.24 9.73 19.39 18.58H224.62ZM660-187.69q47.38 0 79.85-32.46 32.46-32.47 32.46-79.85 0-47.38-32.46-79.85-32.47-32.46-79.85-32.46-47.38 0-79.85 32.46-32.46 32.47-32.46 79.85 0 47.38 32.46 79.85 32.47 32.46 79.85 32.46ZM864-68.46 752.92-179.54q-19.46 15.54-43.19 23.69-23.73 8.16-49.73 8.16-63.46 0-107.88-44.43-44.43-44.42-44.43-107.88 0-63.46 44.43-107.88 44.42-44.43 107.88-44.43 63.46 0 107.88 44.43 44.43 44.42 44.43 107.88 0 26-8.16 49.73-8.15 23.73-23.69 43.19L891.54-96 864-68.46Z"></path>
             </svg>
@@ -47,29 +47,50 @@
                 </div>
             </div>
             <ul class="grid grid-cols-2 gap-2 gap-y-6 mb-48">
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test1.jpg" style="color: transparent;"></a>
+                <li class="flex flex-col ">
+                    <a href="./page0121.html" class="relative overflow-hidden rounded-xl border border-gray-200/50">
+                        <img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full bg-gray-300 object-cover aspect-square" src="./img/test1.jpg" style="color: transparent;">
+                        <div class="absolute top-2 left-2 flex text-xs">
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">150개한정</span>
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">구매제한1개</span>
+                        </div>
+                    </a>
                     <div class="flex gap-1 px-1 flex-col">
                         <div class="flex items-center mt-1">
                             <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 100%;"><span class="text-white text-xs">목표달성</span></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">120</span>/100</span>
+                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 62.4%;"></div>
+                            </div>
+                            <span class="text-sm leading-tight"><span class="font-bold">312</span>/500</span>
                         </div>
                         <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">프리미엄 한우세트</div>
                         <div class="flex items-center">
                             <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">150,000</span><span class="text-xs">원</span></p>
                             <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                <div class="relative flex w-full h-6">
+                                    <button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                        </svg>
+                                    </button>
+                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p>
+                                    <button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test2.jpg" style="color: transparent;"></a>
+                <li class="flex flex-col ">
+                    <a href="./page0121.html" class="relative overflow-hidden rounded-xl border border-gray-200/50">
+                        <img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full bg-gray-300 object-cover aspect-square" src="./img/test2.jpg" style="color: transparent;">
+                        <div class="absolute top-2 left-2 flex text-xs">
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">150개한정</span>
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">구매제한1개</span>
+                        </div>
+                    </a>
                     <div class="flex gap-1 px-1 flex-col">
                         <div class="flex items-center mt-1">
                             <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
@@ -80,62 +101,109 @@
                         <div class="flex items-center">
                             <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">50,000</span><span class="text-xs">원</span></p>
                             <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                <div class="relative flex w-full h-6">
+                                    <button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                        </svg>
+                                    </button>
+                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p>
+                                    <button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test3.jpg" style="color: transparent;"></a>
+                <li class="flex flex-col ">
+                    <a href="./page0121.html" class="relative overflow-hidden rounded-xl border border-gray-200/50">
+                        <img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full bg-gray-300 object-cover aspect-square" src="./img/test3.jpg" style="color: transparent;">
+                        <div class="absolute top-2 left-2 flex text-xs">
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">1000개한정</span>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-950/50 text-2xl font-bold text-white">마 감</div>
+                    </a>
                     <div class="flex gap-1 px-1 flex-col">
                         <div class="flex items-center mt-1">
                             <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 20%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">20</span>/100</span>
+                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 100%;">
+                                    <span class="text-white text-xs">목표달성</span>
+                                </div>
+                            </div><span class="text-sm leading-tight"><span class="font-bold">1000</span>/1000</span>
                         </div>
                         <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">전통 한과 세트전통 한과 세트전통 한과 세트전통 한과 세트</div>
                         <div class="flex items-center">
                             <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">40,000</span><span class="text-xs">원</span></p>
                             <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
+                                <div class="w-18 ml-auto">
+                                    <div class="relative flex w-full h-6">
+                                        <button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-gray-400">
+                                                <path d="M200-440v-80h560v80H200Z"></path>
+                                            </svg>
+                                        </button>
+                                        <p class="flex-1 flex items-center justify-center inset-0 mx-0.5 text-sm text-gray-300">0</p>
+                                        <button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-gray-400">
+                                                <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test4.jpg" style="color: transparent;"></a>
+                <li class="flex flex-col ">
+                    <a href="./page0121.html" class="relative overflow-hidden rounded-xl border border-gray-200/50">
+                        <img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full bg-gray-300 object-cover aspect-square" src="./img/test4.jpg" style="color: transparent;">
+                        <div class="absolute top-2 left-2 flex text-xs">
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">100개한정</span>
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">구매제한1개</span>
+                        </div>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center bg-gray-950/50 text-2xl font-bold text-white">마 감</div>
+                    </a>
                     <div class="flex gap-1 px-1 flex-col">
                         <div class="flex items-center mt-1">
                             <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 100%;"><span class="text-white text-xs">목표달성</span></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">1200</span>/100</span>
+                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 100%;">
+                                    <span class="text-white text-xs">목표달성</span>
+                                </div>
+                            </div>
+                            <span class="text-sm leading-tight"><span class="font-bold">1200</span>/100</span>
                         </div>
                         <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">수제 초콜릿 박스</div>
                         <div class="flex items-center">
                             <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">25,000</span><span class="text-xs">원</span></p>
                             <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                <div class="relative flex w-full h-6">
+                                    <button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-gray-400">
                                             <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                        </svg>
+                                    </button>
+                                    <p class="flex-1 flex items-center justify-center inset-0 mx-0.5 text-sm text-gray-300">0</p>
+                                    <button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-gray-400">
                                             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test5.jpg" style="color: transparent;"></a>
+                <li class="flex flex-col ">
+                    <a href="./page0121.html" class="relative overflow-hidden rounded-xl border border-gray-200/50">
+                        <img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full bg-gray-300 object-cover aspect-square" src="./img/test5.jpg" style="color: transparent;">
+                        <div class="absolute top-2 left-2 flex text-xs">
+                            <span class="flex items-center px-0.5 py-0 mr-1 rounded-xs bg-red-500/75 text-white">구매제한3개</span>
+                        </div>
+                    </a>
                     <div class="flex gap-1 px-1 flex-col">
                         <div class="flex items-center mt-1">
                             <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
@@ -146,266 +214,31 @@
                         <div class="flex items-center">
                             <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">120,000</span><span class="text-xs">원</span></p>
                             <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                <div class="relative flex w-full h-6">
+                                    <button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
+                                        </svg>
+                                    </button>
+                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p>
+                                    <button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
                                             <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test6.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 2%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">2</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">건강 보조 식품 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">70,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test7.jpg," style=""></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 1%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">1</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">프리미엄 커피 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">35,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test8.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 0%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">0</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">고급 차 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">60,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test1.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 100%;"><span class="text-white text-xs">목표달성</span></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">2000</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">프리미엄 한우세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">150,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test2.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 50%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">50</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">유기농 과일 바구니</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">50,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test3.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 20%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">20</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">전통 한과 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">40,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test4.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 10%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">10</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">수제 초콜릿 박스</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">25,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test5.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 5%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">5</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">고급 와인 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">120,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test6.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 2%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">2</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">건강 보조 식품 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">70,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test7.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 1%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">1</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">프리미엄 커피 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">35,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="flex flex-col "><a href="/group-list/goods-Info"><img alt="상품 이미지" loading="lazy" width="300" height="300" decoding="async" data-nimg="1" class="w-full rounded-xl bg-gray-300 border border-gray-200/50 object-cover aspect-square" src="./img/test8.jpg" style="color: transparent;"></a>
-                    <div class="flex gap-1 px-1 flex-col">
-                        <div class="flex items-center mt-1">
-                            <div class="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                <div class="flex items-center justify-center h-full rounded-full bg-teal-500" style="width: 0%;"></div>
-                            </div><span class="text-sm leading-tight"><span class="font-bold">0</span>/100</span>
-                        </div>
-                        <div class="w-full h-9 text-sm text-gray-700 line-clamp-2">고급 차 세트</div>
-                        <div class="flex items-center">
-                            <p class="flex items-center flex-1"><span class="text-lg mr-0.5 font-bold">60,000</span><span class="text-xs">원</span></p>
-                            <div class="w-18 ml-auto">
-                                <div class="relative flex w-full h-6"><button class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M200-440v-80h560v80H200Z"></path>
-                                        </svg></button>
-                                    <p class="flex-1 flex items-center justify-center inset-0 text-sm">0</p><button class="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100"><svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" class="fill-black">
-                                            <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"></path>
-                                        </svg></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
             <div class="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
-                <button id="disabledBtn" type="button" onclick="toggleButtons()" class="group flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-300 text-gray-500">
+                <button id="disabledBtn" type="button" onclick="toggleButtons()" class="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-200 text-gray-500">
                     <span class="font-bold">공동구매 신청</span>
                     <span class="text-sm">상품수량을 선택하세요</span>
                 </button>
-                <a id="activeBtn" href="./page0122.html" class="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-500 text-slate-50 hidden">
+                <a id="activeBtn" href="./page0122.html" class="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-500 text-gray-50 hidden">
                     <span class="text-lg font-bold">공동구매 신청</span>
                 </a>
             </div>
@@ -420,7 +253,7 @@
 
         <!-- 매장정보 레이어팝업 -->
         <div id="martInfo" class="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14 z-40 hidden">
-            <div class="absolute inset-0 bg-black/50" onclick="layerPopup(1)"></div>
+            <div class="absolute inset-0 bg-gray-950/50" onclick="layerPopup(1)"></div>
             <div class="relative flex flex-col p-4 rounded-2xl bg-gray-50 overflow-hidden">
                 <p class="my-2 text-lg font-bold">매장정보</p>
                 <div class="flex flex-col gap-4 h-60 overflow-y-scroll mt-2 bg-white p-4 rounded-lg shadow">

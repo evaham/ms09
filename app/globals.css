@@ -30,7 +30,7 @@ body {
 
 @keyframes slide-top {
   0% {
-    transform: translateY(100px);
+    transform: translateY(800px);
   }
   100% {
     transform: translateY(0);

@@ -52,11 +52,11 @@ const ImageSlider = () => {
             </button>
             <div className="absolute bottom-2 flex space-x-2">
             {images.map((_, index) => (
-                <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-teal-500' : 'bg-slate-600/50' }`}></span>
+                <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-teal-500' : 'bg-gray-600/50' }`}></span>
             ))}
             </div>
         </div>
-        );
+    );
 };
 
 export default ImageSlider;

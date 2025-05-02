@@ -54,7 +54,7 @@ export default function ApplyList() {
 
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
-                    <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white">
+                    <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white cursor-pointer">
                         <span className="text-lg font-bold">총 <span>00</span>건 공동구매 신청</span>
                     </button>
                 </div>

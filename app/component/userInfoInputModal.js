@@ -43,8 +43,8 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                     <input type="checkbox" alt="" className="w-6 h-6 ml-auto" />
                 </div>
                 <div className="flex gap-2 items-center justify-between mt-4">
-                    <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600">취소</button>
-                    <button className="flex-1 flex items-center justify-center h-10 rounded bg-teal-500 text-white">확인</button>
+                    <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600 cursor-pointer">취소</button>
+                    <button className="flex-1 flex items-center justify-center h-10 rounded bg-teal-500 text-white cursor-pointer">확인</button>
                 </div>
                 <button onClick={() => onClose(false)} className="absolute top-3 right-3 fill-gray-500">
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>

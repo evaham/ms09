@@ -53,6 +53,5 @@ export default function OrederSearch() {
             </div>
             <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
-
     );
 }

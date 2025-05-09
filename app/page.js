@@ -6,6 +6,7 @@ import TopButton from "./component/topButton";
 
 export default function Home() {
   const data = require('/public/data/db.json')
+
   return (
     <div className="">
       <div className="flex flex-col p-3">
@@ -21,7 +22,7 @@ export default function Home() {
                 <div className="font-bold line-clamp-1">{item.name}</div>
                 <div className="flex">
                   {item.imgGroup.slice(0, 5).map((imgSrc, index) => (
-                    <div key={index} className="relative overflow-hidden flex items-center justify-center w-16 h-16 -mr-4 border border-gray-300/50 rounded-full">
+                    <div key={imgSrc} className="relative overflow-hidden flex items-center justify-center w-16 h-16 -mr-4 border border-gray-300/50 rounded-full">
                       <Image src={imgSrc} alt={item.name} width={200} height={200} className="w-full h-full object-cover" />
                     </div>
                   ))}

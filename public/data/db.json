@@ -3,7 +3,8 @@
     {
       "id": 1,
       "name": "설 맞이 선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
+      "endday":"D-99",
       "imgGroup": [
         "//thumbnail9.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/6ea0/75d4ed71637fbb7f571a5db732e68920b7198f8266b6ac73b14993ef13bc.jpg",
         "//thumbnail6.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/120a/97c7e3ae5b6d0d8b16508e15695b48a02386b8575afbad89c954b45a7311.jpg",
@@ -13,41 +14,40 @@
         "./img/test5.jpg",
         "./img/test6.jpg",
         "./img/test7.jpg"
-      ],
-      "count":7
+      ]
     },
     {
       "id": 2,
       "name": "향긋한 봄의 향기 산나물 세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
+      "endday":"오늘종료",
       "imgGroup": [
         "//thumbnail10.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/a85e/b184172c227e7c825a7e1780771a450bfa53bf0f8a6465d9c3ae2979554e.jpg",
         "//thumbnail9.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/987b/ccf7b08e98c1a720b7b5ef786409670f0fcf1f94b0680b200cb6319bded6.jpg",
         "//thumbnail7.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/593c/30444badc542eee0ea2219a7688719d0ffc287273c208381d708882cd14a.jpg",
         "//thumbnail8.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/5c24/93463b0f538334f19b377dfd9f932ec6f67ee4eb8308a79cd9807488762b.jpg",
         "//thumbnail10.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/24fb/615a4a97af7c06e0e20839e54b3f4f04240b48e4de667992ab6fed17c1b1.jpg"
-      ],
-      "count":7
+      ]
     },
     {
       "id": 3,
       "name": "[오뚜기 브랜드] 오뚜기 상품 최대 할인 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
+      "endday":"예정",
       "imgGroup": [
         "//thumbnail9.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/0ef8/a1ca7d587afcb35893f69579476f89cfa97c02028ee64e8eb0ea845ed6d7.jpg",
         "//thumbnail6.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/53061815077273-a6914185-2b26-4de1-a652-b71d2f3eb133.jpg",
         "//thumbnail10.coupangcdn.com/thumbnails/remote/320x320ex/image/vendor_inventory/e061/9885056bd327399a5fcbae941705f6ccffb575f003a9e88bd840cccae593.jpg",
         "//thumbnail7.coupangcdn.com/thumbnails/remote/320x320ex/image/retail/images/99033500110774-c90e14a1-cc83-45ec-99a6-28fa65639558.png"
-      ],
-      "count":11
-      
+      ]
     }
   ],
   "page0001_2": [
     {
       "id": 1,
       "name": "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
+      "endday":"마감",
       "imgGroup": [
         "./img/test1.jpg",
         "./img/test2.jpg",
@@ -60,7 +60,8 @@
     {
       "id": 2,
       "name": "설 맞이 선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
+      "endday":"마감",
       "imgGroup": [
         "./img/test1.jpg",
         "./img/test2.jpg",
@@ -74,7 +75,7 @@
     {
       "id": 1,
       "name": "설 맞이 선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
       "imgGroup": [
         "//thumbnail6.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/5212019982480086-c533d2cd-34c5-40ba-a4f3-284da23ed353.jpg",
         "./img/test2.jpg",
@@ -87,7 +88,7 @@
     {
       "id": 2,
       "name": "설 맞이 선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
       "imgGroup": [
         "./img/test1.jpg",
         "./img/test2.jpg",
@@ -99,7 +100,7 @@
     {
       "id": 3,
       "name": "설 맞이 선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
       "imgGroup": [
         "./img/test1.jpg",
         "./img/test2.jpg",
@@ -110,7 +111,7 @@
     {
       "id": 4,
       "name": "설 맞이 선물세트 기획전",
-      "date": "01.16(목)~01.23(목)",
+      "date": "01.16(목) 09:00 ~ 01.23(목) 17:00",
       "imgGroup": [
         "../img/test1.jpg",
         "./img/test2.jpg",
@@ -185,6 +186,7 @@
       "name": "프리미엄 한우세트",
       "price": "150,000",
       "rate": 95,
+      "tag":["150개한정","구매제한1개"],
       "goodsimg": "../img/test1.jpg",
       "totalpieces": 100,
       "orderpieces": 120
@@ -194,6 +196,7 @@
       "name": "유기농 과일 바구니",
       "price": "50,000",
       "rate": 90,
+      "tag":["150개한정","구매제한1개"],
       "goodsimg": "../img/test2.jpg",
       "totalpieces": 100,
       "orderpieces": 50
@@ -203,6 +206,7 @@
       "name": "전통 한과 세트전통 한과 세트전통 한과 세트전통 한과 세트트전통 한과 세트",
       "price": "40,000",
       "rate": 85,
+      "tag":["1000개한정"],
       "goodsimg": "../img/test3.jpg",
       "totalpieces": 100,
       "orderpieces": 20
@@ -212,6 +216,7 @@
       "name": "수제 초콜릿 박스",
       "price": "25,000",
       "rate": 88,
+      "tag":["100개한정","구매제한1개"],
       "goodsimg": "../img/test4.jpg",
       "totalpieces": 100,
       "orderpieces": 1200
@@ -221,13 +226,12 @@
       "name": "고급 와인 세트",
       "price": "120,000",
       "rate": 92,
+      "tag":["구매제한3개"],
       "goodsimg": "../img/test5.jpg",
       "totalpieces": 100,
       "orderpieces": 5
     }
-
   ],
-
   "page0122": [
     {
       "id": 1,

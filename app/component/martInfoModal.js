@@ -1,22 +1,30 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const MartInfoModal = ({isOpen, onClose}) => {
+    useEffect(() => {
+        if (isOpen) {
+            // 모달 열릴 때 body 스크롤 막기
+            document.body.style.overflow = 'hidden';
+        } else {
+            // 모달 닫힐 때 원래대로
+            document.body.style.overflow = '';
+        }
+        return () => {
+            // 컴포넌트 unmount 시에도 원래대로
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
- 
-    // const handleBackgroundClick = (e) => {
-    //     if (e.target.id === e.currentTarget.id) {
-    //         onClose(false);
-    //     }
-    // };
 
     return (
         <div id="martInfo" className="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14z-40" >
-            <div className="absolute inset-0 bg-gray-950/50"  onClick={() => onClose(false)}></div>
-            <div className="relative flex flex-col p-3 rounded-2xl bg-gray-50 overflow-hidden">
+            <div className="absolute inset-0 bg-black/40"  onClick={() => onClose(false)}></div>
+            <div className="relative flex flex-col h-72 p-3 rounded-2xl bg-gray-50 overflow-hidden">
                 <p className="my-2 text-lg font-bold">매장정보</p>
-                <div className="flex flex-col gap-4 h-60 overflow-y-scroll bg-white p-4 rounded-lg shadow">
+                <div className="flex flex-col gap-4 h-60 overflow-y-scroll bg-white p-4 rounded-lg border border-gray-100">
                     <p className="text-xl text-center font-bold">투게더 할인마트</p>
                     <dl className="flex">
                         <dt>전화번호 :&nbsp;</dt>

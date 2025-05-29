@@ -3,19 +3,35 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
 const OrderDetailModal = ({isOpen,onClose}) => {
     const data = require('/public/data/db.json')
+
+    useEffect(() => {
+        if (isOpen) {
+            // 모달 열릴 때 body 스크롤 막기
+            document.body.style.overflow = 'hidden';
+        } else {
+            // 모달 닫힐 때 원래대로
+            document.body.style.overflow = '';
+        }
+        return () => {
+            // 컴포넌트 unmount 시에도 원래대로
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
 
 
     return (
         <div id='orderDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 z-30">
-            <div className="absolute inset-0 bg-gray-950/50" onClick={() => onClose(false)}></div>
-            <div className="relative flex flex-col w-full h-10/12 p-4 rounded-2xl bg-gray-50 overflow-hidden">
+            <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
+            <div className="relative flex flex-col w-full h-[30rem] p-4 rounded-2xl bg-white overflow-hidden">
                 <p className="text-lg font-bold">설 맞이 선물세트 기획전</p>
                 <p className='mt-2 text-sm'>※ 상품 수령기간 : 01.24(금)~ 01.28(화)</p>
-                <div className="flex-1 overflow-y-auto -mx-4 p-4">
+                <div className="flex-1 overflow-y-auto -mx-4 my-1 p-4 border-y border-gray-100 bg-gray-50">
                     <ul className="flex flex-col gap-2">
                         {data.page1111.map((item, index) => (
                             <li key={index}>

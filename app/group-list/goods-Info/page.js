@@ -18,13 +18,13 @@ export default function GoodsInfo() {
                         <p><span className="text-2xl font-bold">29,000</span> 원</p>
                     </div>
                     <div className="flex flex-col gap-2 p-4 rounded-lg bg-white">
-                        <div className="flex items-center justify-center w-18 h-5 rounded-full text-xs bg-gray-200">
+                        <div className="flex items-center justify-center w-24 py-1 rounded-full text-sm bg-gray-200">
                             <span>19%</span>&nbsp;달성
                         </div>
                         <div className=" overflow-hidden w-full my-auto h-3 rounded-full bg-teal-900/15">
                             <div className="h-full bg-teal-500" style={{width:"19%"}}></div>
                         </div>
-                        <div className="flex flex-col mt-1 text-sm">
+                        <div className="flex flex-col mt-1">
                             <dl className="flex">
                                 <dt>달성량/목표수량</dt>
                                 <dd className="ml-auto"><span className="font-bold">19</span>/100개</dd>
@@ -39,13 +39,13 @@ export default function GoodsInfo() {
                             </dl>
                         </div>
                     </div>
-                    <div className="flex flex-col p-4 rounded-lg text-sm bg-white">
+                    <div className="flex flex-col p-4 rounded-lg bg-white">
                         <dl className="flex">
-                            <dt>공동구매 신청기간</dt>
+                            <dt>신청기간</dt>
                             <dd className="ml-auto">01.16(목)~01.23(목)</dd>
                         </dl>
                         <dl className="flex">
-                            <dt>상품 수령기간</dt>
+                            <dt>수령기간</dt>
                             <dd className="ml-auto">01.16(목)~01.23(목)</dd>
                         </dl>
                     </div>

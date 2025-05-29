@@ -2,20 +2,37 @@
 
 import React, { useState } from 'react';
 import UserInfoAgreeModal from './userInfoAgreeModal';
+import { useEffect } from 'react';
 
 
 const UserInfoInputModal = ({isOpen, onClose, popName}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const closeModal = () => setIsModalOpen(false);
 
-     
+    useEffect(() => {
+        if (isOpen) {
+            // 모달 열릴 때 body 스크롤 막기
+            document.body.style.overflow = 'hidden';
+        } else {
+            // 모달 닫힐 때 원래대로
+            document.body.style.overflow = '';
+        }
+        return () => {
+            // 컴포넌트 unmount 시에도 원래대로
+            document.body.style.overflow = '';
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
+
+
+    
 
 
     return (
         <div id="userInfoInput" className="fixed inset-0 z-30">
-            <div className="absolute inset-0 bg-gray-950/50" onClick={() => onClose(false)}></div>
-            <div className="absolute bottom-0 left-0 right-0 mx-3 p-4 pb-8 rounded-t-2xl bg-white slide-top">
+            <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
+            <div className="absolute bottom-0 left-0 right-0 p-4 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="my-2 font-bold">고객정보</p>
                 <div className='flex flex-col mt-2'>
                     <label className="text-sm text-gray-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
@@ -39,8 +56,8 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                 </ul>
                 <hr className="my-4 border-gray-300" />
                 <div className='flex items-center mb-10'>
-                    <label className="text-sm text-gray-500"><span onClick={() => setIsModalOpen(!isModalOpen)} className="underline" >개인정보 수집 및 이용 동의</span><span className='text-teal-600'>(필수)</span></label>  
-                    <input type="checkbox" alt="" className="w-6 h-6 ml-auto" />
+                    <input type="checkbox" alt="" className="w-6 h-6 mr-3" />
+                    <label className="text-sm text-gray-500">공동구매 신청 및 <span onClick={() => setIsModalOpen(!isModalOpen)} className="underline" >개인정보 수집이용</span>에 동의합니다.<span className='text-teal-600'></span></label>  
                 </div>
                 <div className="flex gap-2 items-center justify-between mt-4">
                     <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600 cursor-pointer">취소</button>

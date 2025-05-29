@@ -15,9 +15,9 @@ export default function Home() {
           {data.page0001.map((item, index) => (
             <li key={index}>
               <Link className="relative overflow-hidden flex gap-2 flex-col w-full p-4 rounded-lg bg-white shadow" href={`/group-list/`}>
-                <div className="flex text-sm">
-                  <div className="flex items-center justify-center w-12 mr-2 rounded-full text-xs text-center bg-teal-500 text-white">D-7</div>
-                  <div className="text-gray-500 line-clamp-1">{item.date}</div>
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center px-2 mr-2 rounded-full text-sm text-center bg-teal-500 text-white">{item.endday}</div>
+                  <div className="text-gray-500 line-clamp-1 tracking-tight">{item.date}</div>
                 </div>
                 <div className="font-bold line-clamp-1">{item.name}</div>
                 <div className="flex">
@@ -41,9 +41,9 @@ export default function Home() {
           {data.page0001_2.map((item, index) => (
             <li key={index}>
               <Link className="relative overflow-hidden flex gap-2 flex-col w-full p-4 rounded-lg bg-white shadow" href={`/group-list/`}>
-                <div className="flex text-sm">
-                  <div className="flex items-center justify-center w-12 mr-2 rounded-full text-xs text-center bg-teal-500 text-white">D-7</div>
-                  <div className="text-gray-500 line-clamp-1">{item.date}</div>
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center px-2 mr-2 rounded-full text-sm text-center bg-gray-500 text-white">{item.endday}</div>
+                  <div className="text-gray-500 line-clamp-1 tracking-tight">{item.date}</div>
                 </div>
                 <div className="font-bold line-clamp-1">{item.name}</div>
                 <div className="flex">

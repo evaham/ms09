@@ -71,7 +71,7 @@ export default function ApplyList() {
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 h-20 border border-gray-300/50 object-cover aspect-square" />
                                 <div className="relative flex-1 flex flex-col rounded-lg">
                                     <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
-                                    <div className='flex flex-col'>
+                                    <div className='flex'>
                                         {item.tag.map((i) => (
                                             <span key={i} className='mr-2 text-sm text-red-500'>{i}</span>
                                         ))}

@@ -26,9 +26,6 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
     if (!isOpen) return null;
 
 
-    
-
-
     return (
         <div id="userInfoInput" className="fixed inset-0 z-30">
             <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>

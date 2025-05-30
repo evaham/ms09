@@ -6,6 +6,7 @@ import CounterButton from '@/app/component/countButton';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
 import Image from 'next/image';
 import Toast from '@/app/component/toast';
+import CustomModal from '@/app/component/customModal';
 
 import { useEffect } from 'react';
 
@@ -112,7 +113,8 @@ export default function ApplyList() {
                     </button>
                 </div>
             </div>
-            <UserInfoInputModal isOpen={isModalOpen} onClose={closeModal} />
+            {/* <UserInfoInputModal isOpen={isModalOpen} onClose={closeModal} /> */}
+            <CustomModal isOpen={isModalOpen} onClose={closeModal} viewPage="userInput" />
         </div>
     );
 }

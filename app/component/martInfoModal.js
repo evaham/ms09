@@ -20,7 +20,7 @@ const MartInfoModal = ({isOpen, onClose}) => {
     if (!isOpen) return null;
 
     return (
-        <div id="martInfo" className="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14z-40" >
+        <div id="martInfo" className="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14 z-40" >
             <div className="absolute inset-0 bg-black/40"  onClick={() => onClose(false)}></div>
             <div className="relative flex flex-col h-72 p-3 rounded-2xl bg-gray-50 overflow-hidden">
                 <p className="my-2 text-lg font-bold">매장정보</p>

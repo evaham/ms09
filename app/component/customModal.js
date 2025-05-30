@@ -7,7 +7,16 @@ import Image from 'next/image';
 
 const customModal = ({isOpen,onClose,viewPage}) => {
     const data = require('/public/data/db.json')
-    const [page, setPage] = useState(viewPage);
+
+
+    viewPage2((e) => {
+        if (e === 'userAgree2') {
+            document.getElementById('userAgree2').style.display = 'flex';
+        } else {
+            document.getElementById('userAgree2').style.display = 'none';
+        }
+
+    });
     
 
     useEffect(() => {
@@ -76,7 +85,7 @@ const customModal = ({isOpen,onClose,viewPage}) => {
                     </button>
                 </div>
             </div>
-            <div id='userAgree2' className='fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 z-30' style={{ display: viewPage === 'userAgree2' ? 'flex' : 'none' }}>
+            <div id='userAgree2' className='fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 z-30' style={{ display: viewPage2 === 'userAgree2' ? 'flex' : 'none' }}>
                 <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
                 <div className="relative flex flex-col w-full h-[30rem] p-4 rounded-2xl bg-gray-50 overflow-hidden">
                     <p className="my-2 text-lg font-bold">개인정보 수집·이용 동의서</p>
@@ -154,7 +163,7 @@ const customModal = ({isOpen,onClose,viewPage}) => {
                     <hr className="my-4 border-gray-300" />
                     <div className='flex items-center mb-10'>
                         <input type="checkbox" alt="" className="w-6 h-6 mr-3" />
-                        <label className="text-sm text-gray-500">공동구매 신청 및 <span onClick={() => setViewPage('userAgree')} className="underline" >개인정보 수집이용</span>에 동의합니다.<span className='text-teal-600'></span></label>  
+                        <label className="text-sm text-gray-500">공동구매 신청 및 <span onClick={() => viewPage2('userAgree')} className="underline" >개인정보 수집이용</span>에 동의합니다.<span className='text-teal-600'></span></label>  
                     </div>
                     <div className="flex gap-2 items-center justify-between mt-4">
                         <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600 cursor-pointer">취소</button>

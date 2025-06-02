@@ -7,8 +7,7 @@ import TopButton from "@/app/component/topButton";
 
 export default function OrderList() {
     const data = require('/public/data/db.json')
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const closeModal = () => setIsModalOpen(false);
+    const [isOrderDetailOpen, setIsOrderDetailOpen] = useState(false);
 
     return (
         <div>
@@ -18,7 +17,7 @@ export default function OrderList() {
                 <ul className="flex flex-col gap-2 mb-48">
                     {data.page0111.map((item, index) => (
                         <li key={index}>
-                            <div onClick={() => setIsModalOpen(!isModalOpen)} className="relative flex gap-1 flex-col w-full p-4 rounded-lg bg-white shadow">
+                            <div onClick={() => setIsOrderDetailOpen(!isOrderDetailOpen)} className="relative flex gap-1 flex-col w-full p-4 rounded-lg bg-white shadow">
                                 <div className="pr-4 font-bold line-clamp-1">{item.name}</div>
                                 <span className="text-sm text-gray-500">{item.date}</span>
                                 <div className="position absolute right-2 top-0 bottom-0 flex items-center justify-center fill-gray-500">
@@ -29,7 +28,9 @@ export default function OrderList() {
                     ))}
                 </ul>
             </div>
-            <OrderDetailModal isOpen={isModalOpen} onClose={closeModal} />
+            {isOrderDetailOpen && (
+                <OrderDetailModal stopScroll={true} onClose={()=>setIsOrderDetailOpen(false)} />
+            )}
             <TopButton isButton={false} />
         </div>
     );

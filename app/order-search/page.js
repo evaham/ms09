@@ -8,17 +8,7 @@ import Link from "next/link";
 export default function OrederSearch() {
     const propLink = '/order-search/order-list'
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const closeModal = () => setIsModalOpen(false);
-
-    // const handlePhoneInput = (e) => {
-    //     const input = e.target.value.replace(/[^0-9]/g, ""); // 숫자만 허용
-    //     const formatted = input
-    //         .replace(/^(\d{3})(\d{1,4})/, "$1-$2")
-    //         .replace(/-(\d{4})(\d)/, "-$1-$2");
-    //     e.target.value = formatted;
-    // };
+    const [isAgreeModalOpen, setIsAgreeModalOpen] = useState(false);
 
     return (
         <div>
@@ -43,7 +33,7 @@ export default function OrederSearch() {
                     </div>
                 </div>
 
-                <div onClick={() => setIsModalOpen(!isModalOpen)} className="ml-auto mt-2 underline text-sm text-gray-500 cursor-pointer">개인정보 수집·이용 확인하기</div>
+                <div onClick={() => setIsAgreeModalOpen(true)} className="ml-auto mt-2 underline text-sm text-gray-500 cursor-pointer">개인정보 수집·이용 확인하기</div>
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
                     <Link href={"/order-search/order-list"} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center bg-teal-500 text-white">
@@ -51,7 +41,9 @@ export default function OrederSearch() {
                     </Link>
                 </div>
             </div>
-            <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
+            {isAgreeModalOpen && (
+                <UserInfoAgreeModal stopScroll={true} onClose={()=>setIsAgreeModalOpen(false)} />
+            )}
         </div>
     );
 }

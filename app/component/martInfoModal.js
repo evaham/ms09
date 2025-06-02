@@ -2,9 +2,9 @@
 
 import React, { useEffect } from 'react';
 
-const MartInfoModal = ({isOpen, onClose}) => {
+const MartInfoModal = ({stopScroll, onClose}) => {
     useEffect(() => {
-        if (isOpen) {
+        if (stopScroll) {
             // 모달 열릴 때 body 스크롤 막기
             document.body.style.overflow = 'hidden';
         } else {
@@ -15,9 +15,7 @@ const MartInfoModal = ({isOpen, onClose}) => {
             // 컴포넌트 unmount 시에도 원래대로
             document.body.style.overflow = '';
         };
-    }, [isOpen]);
-
-    if (!isOpen) return null;
+    }, [stopScroll]);
 
     return (
         <div id="martInfo" className="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14 z-40" >

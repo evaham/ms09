@@ -5,11 +5,11 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-const OrderDetailModal = ({isOpen,onClose}) => {
+const OrderDetailModal = ({stopScroll,onClose}) => {
     const data = require('/public/data/db.json')
 
     useEffect(() => {
-        if (isOpen) {
+        if (stopScroll) {
             // 모달 열릴 때 body 스크롤 막기
             document.body.style.overflow = 'hidden';
         } else {
@@ -20,10 +20,7 @@ const OrderDetailModal = ({isOpen,onClose}) => {
             // 컴포넌트 unmount 시에도 원래대로
             document.body.style.overflow = '';
         };
-    }, [isOpen]);
-
-    if (!isOpen) return null;
-
+    }, [stopScroll]);
 
     return (
         <div id='orderDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 z-30">

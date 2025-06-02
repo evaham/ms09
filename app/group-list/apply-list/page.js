@@ -6,14 +6,14 @@ import CounterButton from '@/app/component/countButton';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
 import Image from 'next/image';
 import Toast from '@/app/component/toast';
-import CustomModal from '@/app/component/customModal';
 
 import { useEffect } from 'react';
+import UserInfoAgreeModal from '@/app/component/userInfoAgreeModal';
 
 export default function ApplyList() {
     const data = require('/public/data/db.json')
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const closeModal = () => setIsModalOpen(false);
+    const [isInfoInputOpen, setIsInfoInputOpen] = useState(false);
+    const [isAgreeModalOpen, setIsAgreeModalOpen] = useState(false);
 
 
     const [toastMessage, setToastMessage] = useState('');
@@ -52,6 +52,7 @@ export default function ApplyList() {
         window.removeEventListener('beforeunload', handleBeforeUnload);
         };
     }, []);
+
 
 
 
@@ -108,13 +109,17 @@ export default function ApplyList() {
 
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
-                    <button type="button" onClick={() => setIsModalOpen(!isModalOpen)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white cursor-pointer">
+                    <button type="button" onClick={() => setIsInfoInputOpen(true)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white cursor-pointer">
                         <span className="text-lg font-bold">총 <span>00</span>건 공동구매 신청</span>
                     </button>
                 </div>
             </div>
-            {/* <UserInfoInputModal isOpen={isModalOpen} onClose={closeModal} /> */}
-            <CustomModal isOpen={isModalOpen} onClose={closeModal} viewPage="userInput" />
+            {isInfoInputOpen && (
+                <UserInfoInputModal stopScroll={true} onClose={()=>setIsInfoInputOpen(false)} infoAgreeOpen={()=>setIsAgreeModalOpen(true)} />
+            )}
+            {isAgreeModalOpen && (
+                <UserInfoAgreeModal stopScroll={true} onClose={()=>setIsAgreeModalOpen(false)} />
+            )}
         </div>
     );
 }

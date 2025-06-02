@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 
-const UserInfoAgreeModal = ({isOpen,onClose}) => {
+const UserInfoAgreeModal = ({stopScroll, onClose}) => {
 
     useEffect(() => {
-        if (isOpen) {
+        if (stopScroll) {
             // 모달 열릴 때 body 스크롤 막기
             document.body.style.overflow = 'hidden';
         } else {
@@ -18,10 +18,7 @@ const UserInfoAgreeModal = ({isOpen,onClose}) => {
             // 컴포넌트 unmount 시에도 원래대로
             document.body.style.overflow = '';
         };
-    }, [isOpen]);
-
-    if (!isOpen) return null;
-
+    }, [stopScroll]);
  
     return (
         <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 z-30">

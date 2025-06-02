@@ -5,12 +5,11 @@ import UserInfoAgreeModal from './userInfoAgreeModal';
 import { useEffect } from 'react';
 
 
-const UserInfoInputModal = ({isOpen, onClose, popName}) => {
+const UserInfoInputModal = ({stopScroll, onClose, infoAgreeOpen}) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const closeModal = () => setIsModalOpen(false);
 
     useEffect(() => {
-        if (isOpen) {
+        if (stopScroll) {
             // 모달 열릴 때 body 스크롤 막기
             document.body.style.overflow = 'hidden';
         } else {
@@ -21,10 +20,7 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
             // 컴포넌트 unmount 시에도 원래대로
             document.body.style.overflow = '';
         };
-    }, [isOpen]);
-
-    if (!isOpen) return null;
-
+    }, [stopScroll]);
 
     return (
         <div id="userInfoInput" className="fixed inset-0 z-30">
@@ -54,7 +50,7 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                 <hr className="my-4 border-gray-300" />
                 <div className='flex items-center mb-10'>
                     <input type="checkbox" alt="" className="w-6 h-6 mr-3" />
-                    <label className="text-sm text-gray-500">공동구매 신청 및 <span onClick={() => setIsModalOpen(!isModalOpen)} className="underline" >개인정보 수집이용</span>에 동의합니다.<span className='text-teal-600'></span></label>  
+                    <label className="text-sm text-gray-500">공동구매 신청 및 <span onClick={infoAgreeOpen} className="underline" >개인정보 수집이용</span>에 동의합니다.<span className='text-teal-600'></span></label>  
                 </div>
                 <div className="flex gap-2 items-center justify-between mt-4">
                     <button onClick={() => onClose(false)} className="flex-1 flex items-center justify-center h-10 rounded bg-gray-100 text-gray-600 cursor-pointer">취소</button>
@@ -64,7 +60,6 @@ const UserInfoInputModal = ({isOpen, onClose, popName}) => {
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>
-            <UserInfoAgreeModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
     )
 } 

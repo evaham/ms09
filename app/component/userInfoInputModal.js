@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 
 
 const UserInfoInputModal = ({stopScroll, onClose, infoAgreeOpen}) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         if (stopScroll) {

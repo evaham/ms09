@@ -2,36 +2,46 @@
 layerPopup = (e) => {
     const martInfo = document.querySelector('#martInfo');
     const userInfoInput = document.querySelector('#userInfoInput');
+    const body = document.querySelector('body');
 
     if (e === 1) {
         // 1매장정보 레이어팝업
         if (martInfo.classList.contains('hidden')) {
             martInfo.classList.remove('hidden');
+            body.classList.add('overflow-hidden'); // 스크롤 막기
         } else {
             martInfo.classList.add('hidden');
+            body.classList.remove('overflow-hidden'); // 스크롤 원래대로
         }
     } else if (e === 2) {
         // 2고객정보입력 레이어팝업
         if (userInfoInput.classList.contains('hidden')) {
             userInfoInput.classList.remove('hidden');
+            body.classList.add('overflow-hidden'); // 스크롤 막기
+
         } else {
             userInfoInput.classList.add('hidden');
+            body.classList.remove('overflow-hidden'); // 스크롤 원래대로
         }
     }else if(e === 3) {
         // 3개인정보수집이용동의 레이어팝업
         const userInfoAgree = document.querySelector('#userInfoAgree');
         if (userInfoAgree.classList.contains('hidden')) {
             userInfoAgree.classList.remove('hidden');
+            body.classList.add('overflow-hidden'); // 스크롤 막기
         } else {
             userInfoAgree.classList.add('hidden');
+            body.classList.remove('overflow-hidden'); // 스크롤 원래대로
         }
     }else if(e === 4) {
         // 4 레이어팝업
         const orderDetail = document.querySelector('#orderDetail');
         if (orderDetail.classList.contains('hidden')) {
             orderDetail.classList.remove('hidden');
+            body.classList.add('overflow-hidden'); // 스크롤 막기
         } else {
             orderDetail.classList.add('hidden');
+            body.classList.remove('overflow-hidden'); // 스크롤 원래대로
         }
     }
 };

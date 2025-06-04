@@ -4,23 +4,17 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { useModalControl } from '@/app/context/modalContext';
 
-const OrderDetailModal = ({stopScroll,onClose}) => {
+const OrderDetailModal = ({onClose}) => {
     const data = require('/public/data/db.json')
+    const { openModal, closeModal } = useModalControl();
 
     useEffect(() => {
-        if (stopScroll) {
-            // 모달 열릴 때 body 스크롤 막기
-            document.body.style.overflow = 'hidden';
-        } else {
-            // 모달 닫힐 때 원래대로
-            document.body.style.overflow = '';
-        }
-        return () => {
-            // 컴포넌트 unmount 시에도 원래대로
-            document.body.style.overflow = '';
-        };
-    }, [stopScroll]);
+        openModal();
+        return () => closeModal();
+    }, []);
+
 
     return (
         <div id='orderDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 z-30">

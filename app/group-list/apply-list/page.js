@@ -115,10 +115,10 @@ export default function ApplyList() {
                 </div>
             </div>
             {isInfoInputOpen && (
-                <UserInfoInputModal stopScroll={true} onClose={()=>setIsInfoInputOpen(false)} infoAgreeOpen={()=>setIsAgreeModalOpen(true)} />
+                <UserInfoInputModal onClose={()=>setIsInfoInputOpen(false)} infoAgreeOpen={()=>setIsAgreeModalOpen(true)} />
             )}
             {isAgreeModalOpen && (
-                <UserInfoAgreeModal stopScroll={true} onClose={()=>setIsAgreeModalOpen(false)} />
+                <UserInfoAgreeModal onClose={()=>setIsAgreeModalOpen(false)} />
             )}
         </div>
     );

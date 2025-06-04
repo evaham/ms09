@@ -1,21 +1,16 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import { useModalControl } from '@/app/context/modalContext';
 
-const MartInfoModal = ({stopScroll, onClose}) => {
+const MartInfoModal = ({onClose}) => {
+
+    const { openModal, closeModal } = useModalControl();
+
     useEffect(() => {
-        if (stopScroll) {
-            // 모달 열릴 때 body 스크롤 막기
-            document.body.style.overflow = 'hidden';
-        } else {
-            // 모달 닫힐 때 원래대로
-            document.body.style.overflow = '';
-        }
-        return () => {
-            // 컴포넌트 unmount 시에도 원래대로
-            document.body.style.overflow = '';
-        };
-    }, [stopScroll]);
+        openModal();
+        return () => closeModal();
+    }, []);
 
     return (
         <div id="martInfo" className="fixed inset-0 flex flex-col items-center justify-center mt-12 p-3 pt-14 z-40" >

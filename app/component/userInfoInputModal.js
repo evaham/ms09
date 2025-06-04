@@ -1,25 +1,16 @@
 'use client'
 
-import React, { useState } from 'react';
-import UserInfoAgreeModal from './userInfoAgreeModal';
 import { useEffect } from 'react';
+import { useModalControl } from '@/app/context/modalContext';
 
+const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
 
-const UserInfoInputModal = ({stopScroll, onClose, infoAgreeOpen}) => {
+    const { openModal, closeModal } = useModalControl();
 
     useEffect(() => {
-        if (stopScroll) {
-            // 모달 열릴 때 body 스크롤 막기
-            document.body.style.overflow = 'hidden';
-        } else {
-            // 모달 닫힐 때 원래대로
-            document.body.style.overflow = '';
-        }
-        return () => {
-            // 컴포넌트 unmount 시에도 원래대로
-            document.body.style.overflow = '';
-        };
-    }, [stopScroll]);
+        openModal();
+        return () => closeModal();
+    }, []);
 
     return (
         <div id="userInfoInput" className="fixed inset-0 z-30">

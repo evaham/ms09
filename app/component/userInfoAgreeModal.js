@@ -2,24 +2,17 @@
 
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { useModalControl } from '@/app/context/modalContext';
 
-
-const UserInfoAgreeModal = ({stopScroll, onClose}) => {
+const UserInfoAgreeModal = ({onClose}) => {
+ 
+    const { openModal, closeModal } = useModalControl();
 
     useEffect(() => {
-        if (stopScroll) {
-            // 모달 열릴 때 body 스크롤 막기
-            document.body.style.overflow = 'hidden';
-        } else {
-            // 모달 닫힐 때 원래대로
-            document.body.style.overflow = '';
-        }
-        return () => {
-            // 컴포넌트 unmount 시에도 원래대로
-            document.body.style.overflow = '';
-        };
-    }, [stopScroll]);
- 
+        openModal();
+        return () => closeModal();
+    }, []);
+
     return (
         <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 z-30">
             <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>

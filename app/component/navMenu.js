@@ -31,7 +31,7 @@ const NavMenu = () => {
                 </svg>
             </Link>
             {isMartInfoOpen &&(
-                <MartInfoModal stopScroll={true} onClose={()=>setIsMartInfoOpen(false)} />
+                <MartInfoModal onClose={()=>setIsMartInfoOpen(false)} />
             )}
         </div>
     );

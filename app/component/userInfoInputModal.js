@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import { useModalControl } from '@/app/context/modalContext';
+import React, { useState } from 'react';
 
 const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
 
@@ -12,14 +13,31 @@ const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
         return () => closeModal();
     }, []);
 
+    const [text, setText] = useState('');
+    const maxLength = 16;
+
+    const handleChange = (e) => {
+        const input = e.target.value;
+        if (input.length <= maxLength) {
+        setText(input);
+        }
+    };
+
     return (
         <div id="userInfoInput" className="fixed inset-0 z-30">
             <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
             <div className="absolute bottom-0 left-0 right-0 p-4 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="my-2 font-bold">고객정보</p>
-                <div className='flex flex-col mt-2'>
+                <div className='relative flex flex-col mt-2'>
                     <label className="text-sm text-gray-500">닉네임 (한글, 영문, 숫자만 입력가능)</label>
-                    <input type="text" placeholder="이름" className="flex-1 flex p-2 items-center border border-gray-300 rounded focus:outline-none focus:border-teal-500" />
+                    <input type="text" placeholder="이름" onChange={handleChange} className="flex-1 flex p-2 pr-20 items-center border border-gray-300 rounded focus:outline-none focus:border-teal-500" />
+                    <div className="absolute right-3 bottom-3 text-sm mt-1 text-right">
+                        <span className={text.length > maxLength ? 'text-red-600' : 'text-gray-500'}>
+                        {text.length} / {maxLength}
+                        </span>
+                    </div>
+
+
                 </div>
                 <div className="mt-2">
                     <label className="text-sm text-gray-500">휴대번호 (숫자만 입력 가능)</label>

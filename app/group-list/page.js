@@ -8,11 +8,45 @@ import TopButton from "../component/topButton";
 import Image from "next/image";
 
 export default function GroupList() {
-    const data = require('/public/data/db.json')
-
     const [type, setType] = useState('disabled');
-
     const activeBtn = (e) => setType(e);
+
+    const [items, setItems] = useState([
+        {
+            "id": 1,
+            "name": "프리미엄 한우세트",
+            "price": "150,000",
+            "rate": 95,
+            "count": 0,
+            "tag":["150개한정","구매제한1개"],
+            "goodsimg": "./img/test1.jpg",
+            "totalpieces": 500,
+            "orderpieces": 312,
+            "active": true
+        },
+        {
+            "id": 2,
+            "name": "유기농 과일 바구니",
+            "price": "50,000",
+            "rate": 90,
+            "count": 0,
+            "tag":["150개한정","구매제한1개"],
+            "goodsimg": "./img/test2.jpg",
+            "totalpieces": 100,
+            "orderpieces": 50,
+            "active": true
+        },
+    ]);
+
+    const updateCount = (id, newCount) => {
+        setItems((prev) =>
+        prev.map((item) =>
+            item.id === id ? { ...item, count: newCount } : item
+        )
+        );
+    };
+
+    const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
     return (
         <div>
@@ -32,7 +66,7 @@ export default function GroupList() {
                     </div>
                 </div>
                 <ul className="grid grid-cols-2 gap-2 gap-y-6 mb-48">
-                    {data.page0012.map((item, index) => (
+                    {items.map((item, index) => (
                         <li key={index} className="flex flex-col ">
                             <Link href={`/group-list/goods-Info`} className="relative overflow-hidden rounded-xl border border-gray-200/50 ">
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-gray-300 object-cover aspect-square" />
@@ -64,7 +98,7 @@ export default function GroupList() {
                                     </p>
                                     <div className="w-18 ml-auto">
                                         {item.active === true &&
-                                            <CounterButton  />
+                                            <CounterButton key={item.id} item={item} onChange={updateCount} />
                                         }
                                         {item.active === false &&
                                             <div className="relative flex w-full h-6">
@@ -85,17 +119,18 @@ export default function GroupList() {
                 </ul>
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
-                    {type === 'disabled' &&
+                    {totalCount === 0 &&
                         <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-200 text-gray-500">
                             <span className="font-bold">공동구매 신청</span>
                             <span className="">상품수량을 선택하세요</span>
                         </button>
                     }
-                    {type === 'active' && 
+                    {totalCount > 0 && 
                         <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-gray-50">
                             <span className="text-lg font-bold">공동구매 신청</span>
                         </Link>
                     }
+
                 </div>
             </div>
             <TopButton isButton={true} />

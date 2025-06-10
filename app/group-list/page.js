@@ -15,24 +15,48 @@ export default function GroupList() {
         {
             "id": 1,
             "name": "프리미엄 한우세트",
-            "price": "150,000",
-            "rate": 95,
+            "price": 150000,
+            "orderlimit": 2,
             "count": 0,
-            "tag":["150개한정","구매제한1개"],
-            "goodsimg": "./img/test1.jpg",
-            "totalpieces": 500,
+            "tag":["500개한정","구매제한2개"],
+            "goodsimg": "../img/test1.jpg",
+            "limitpieces": 500,
             "orderpieces": 312,
             "active": true
         },
         {
             "id": 2,
-            "name": "유기농 과일 바구니",
-            "price": "50,000",
-            "rate": 90,
+            "name": "[애경]샴푸린스 세트 (대용량)",
+            "price": 65000,
+            "orderlimit": 90,
+            "count": 0,
+            "tag":["200개한정"],
+            "goodsimg": "../img/test2.jpg",
+            "limitpieces": 200,
+            "orderpieces": 200,
+            "active": false
+        },
+        {
+            "id": 3,
+            "name": "[사조] 참치 선물세트 1호 (개별구매 제한)",
+            "price": 33000,
+            "orderlimit": 99,
+            "count": 0,
+            "tag":[""],
+            "goodsimg": "../img/test3.jpg",
+            "limitpieces": 100,
+            "orderpieces": 200,
+            "active": true
+        },
+        {
+            "id": 4,
+            "name": "[농협] 안심 정육세트",
+            "price": 73000,
+            "orderlimit": 1,
             "count": 0,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "./img/test2.jpg",
-            "totalpieces": 100,
+            "goodsimg": "../img/test4.jpg",
+            "limitpieces": 100,
             "orderpieces": 50,
             "active": true
         },
@@ -82,13 +106,13 @@ export default function GroupList() {
                             <div className="flex gap-1 px-1 flex-col">
                                 <div className="flex items-center mt-1">
                                     <div className="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                        <div className="flex items-center justify-center h-full rounded-full bg-teal-500" style={{width: `${Math.min((item.orderpieces / item.totalpieces) * 100, 100)}%`}}>
-                                            {(item.orderpieces / item.totalpieces) * 100 >= 100 && (
+                                        <div className="flex items-center justify-center h-full rounded-full bg-teal-500" style={{width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%`}}>
+                                            {(item.orderpieces / item.limitpieces) * 100 >= 100 && (
                                                 <span className="text-white text-xs">목표달성</span>
                                             )}
                                         </div>
                                     </div>
-                                    <span className=" leading-tight"><span className="font-bold">{item.orderpieces}</span>/{item.totalpieces}</span>
+                                    <span className=" leading-tight"><span className="font-bold">{item.orderpieces}</span>/{item.limitpieces}</span>
                                 </div>
                                 <div className="w-full h-10 text-gray-700 line-clamp-2 leading-tight">{item.name}</div>
                                 <div className="flex items-center">

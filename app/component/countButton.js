@@ -3,9 +3,12 @@ import React, { useState } from 'react';
 
 const CounterButton = ({item, onChange}) => {
 	// const [count, setCount] = useState(0);
-
 	const handleIncrement = () => {
-		onChange(item.id, item.count + 1);
+		if (item.count < item.orderlimit) {
+			onChange(item.id, item.count + 1);
+		}else {
+			alert(`최대 ${item.orderlimit}개까지 구매 가능합니다.`);
+		}
 	};
 
 	const handleDecrement = () => {

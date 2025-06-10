@@ -17,23 +17,47 @@ export default function ApplyList() {
             "id": 1,
             "name": "프리미엄 한우세트",
             "price": 150000,
-            "rate": 95,
-            "count": 0,
-            "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test1.jpg",
-            "totalpieces": 500,
+            "orderlimit": 2,
+            "count": 1,
+            "tag":["500개한정","구매제한2개"],
+            "goodsimg": "../img/test1.jpg",
+            "limitpieces": 500,
             "orderpieces": 312,
             "active": true
         },
         {
             "id": 2,
-            "name": "유기농 과일 바구니",
-            "price": 50000,
-            "rate": 90,
+            "name": "[애경]샴푸린스 세트 (대용량)",
+            "price": 65000,
+            "orderlimit": 90,
             "count": 0,
+            "tag":["200개한정"],
+            "goodsimg": "../img/test2.jpg",
+            "limitpieces": 200,
+            "orderpieces": 200,
+            "active": false
+        },
+        {
+            "id": 3,
+            "name": "[사조] 참치 선물세트 1호 (개별구매 제한)",
+            "price": 33000,
+            "orderlimit": 99,
+            "count": 2,
+            "tag":[""],
+            "goodsimg": "../img/test3.jpg",
+            "limitpieces": 100,
+            "orderpieces": 200,
+            "active": true
+        },
+        {
+            "id": 4,
+            "name": "[농협] 안심 정육세트",
+            "price": 73000,
+            "orderlimit": 1,
+            "count": 1,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test2.jpg",
-            "totalpieces": 100,
+            "goodsimg": "../img/test4.jpg",
+            "limitpieces": 100,
             "orderpieces": 50,
             "active": true
         },
@@ -41,7 +65,16 @@ export default function ApplyList() {
 
     // 삭제
     const handleDelete = (id) => {
-        setItems(items.filter(item => item.id !== id));
+        const result = window.confirm('상품을 삭제하시겠습니까?');
+        if (result) {
+            // 사용자가 확인을 눌렀을 때 실행
+            setItems(items.filter(item => item.id !== id));
+            console.log('상품이 삭제 되었습니다.');
+            showToast('상품이 삭제 되었습니다.');
+        } else {
+            // 사용자가 취소를 눌렀을 때 실행
+            console.log('');
+        }
     };
 
     // 총 신청 수량 계산
@@ -81,17 +114,17 @@ export default function ApplyList() {
         setToastMessage('');
     }
 
-    const handleClick = () => {
-        const result = window.confirm('상품을 삭제하시겠습니까?');
-        if (result) {
-        // 사용자가 확인을 눌렀을 때 실행
-        console.log('상품이 삭제 되었습니다.');
-        showToast('상품이 삭제 되었습니다.');
-        } else {
-        // 사용자가 취소를 눌렀을 때 실행
-        console.log('');
-        }
-    };
+    // const handleClick = () => {
+    //     const result = window.confirm('상품을 삭제하시겠습니까?');
+    //     if (result) {
+    //     // 사용자가 확인을 눌렀을 때 실행
+    //     console.log('상품이 삭제 되었습니다.');
+    //     showToast('상품이 삭제 되었습니다.');
+    //     } else {
+    //     // 사용자가 취소를 눌렀을 때 실행
+    //     console.log('');
+    //     }
+    // };
 
     useEffect(() => {
         const handleBeforeUnload = (e) => {
@@ -120,7 +153,7 @@ export default function ApplyList() {
                 <p className="my-2 text-lg font-bold">공동구매 신청</p>
                 <p className="mb-2 text-sm text-gray-500">설 맞이 선물세트 기획전</p>
                 <ul className="flex flex-col gap-2 mb-48">
-                    {items.map((item, index) => (
+                    {items.filter(item => item.active).map((item, index) => (
                         <li key={index}>
                             <div className="flex gap-2 p-4 rounded-lg bg-white shadow">
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 h-20 border border-gray-300/50 object-cover aspect-square" />
@@ -160,11 +193,17 @@ export default function ApplyList() {
                 </ul>
                 {toastMessage && <Toast message={toastMessage} />}
 
-
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
-                    <button type="button" onClick={() => setIsInfoInputOpen(true)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tightbg bg-teal-500 text-white cursor-pointer">
-                        <span className="text-lg font-bold">총 <span>{totalCount}</span>건 공동구매 신청</span>
-                    </button>
+                    {totalCount === 0 ? (
+                        <button onClick={() => showToast('상품 수량을 선택해주세요.')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-200 text-gray-500 cursor-pointer">
+                            <span className="text-lg font-bold">공동구매 신청</span>
+                            <span className="">상품수량을 선택하세요</span>
+                        </button>
+                    ) : (
+                        <button type="button" onClick={() => setIsInfoInputOpen(true)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-500 text-white cursor-pointer">
+                            <span className="text-lg font-bold">총 <span>{totalCount}</span>건 공동구매 신청</span>
+                        </button>
+                    )}
                 </div>
             </div>
             {isInfoInputOpen && (

@@ -42,7 +42,7 @@ export default function GroupList() {
             "price": 33000,
             "orderlimit": 99,
             "count": 0,
-            "tag":[""],
+            "tag": [],
             "goodsimg": "../img/test3.jpg",
             "limitpieces": 100,
             "orderpieces": 200,
@@ -74,17 +74,17 @@ export default function GroupList() {
 
     return (
         <div>
-            <div className="flex flex-col p-3 bg-white">
-                <div className="flex justify-center items-center h-10 border border-teal-500/20 bg-teal-500/10 rounded-full font-bold text-xl">
+            <div className="flex flex-col p-3 pt-0 bg-white">
+                <div className="flex justify-center items-center -mx-3 h-12 bg-teal-500 font-bold text-xl text-white">
                     <span className="mr-2">신청마감</span> <span>07일 12:20:45</span>
                 </div>
                 <div className="flex flex-col my-4">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
-                    <div className="flex text-gray-500">
+                    <div className="flex text-slate-500">
                         <span>• 신청기간</span>
                         <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
-                    <div className="flex text-gray-500">
+                    <div className="flex text-slate-500">
                         <span>• 수령기간</span>
                         <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
@@ -96,7 +96,7 @@ export default function GroupList() {
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-gray-300 object-cover aspect-square" />
                                 <div className="absolute top-1 left-1 flex flex-wrap gap-1 text-sm">
                                     {item.tag.map((i) => (
-                                        <span key={i} className='flex justify-center items-center px-1 py-0 mr-1 rounded-full bg-rose-600 text-white'>{i}</span>
+                                        <span key={i} className='flex justify-center items-center p-0.5 rounded-sm leading-none bg-red-500 bg-blend-lighten text-white'>{i}</span>
                                     ))}
                                 </div>
                                 {item.active === false &&
@@ -117,8 +117,8 @@ export default function GroupList() {
                                 <div className="w-full h-10 text-gray-700 line-clamp-2 leading-tight">{item.name}</div>
                                 <div className="flex items-center">
                                     <p className="flex items-center flex-1">
-                                        <span className="text-lg mr-0.5 font-bold">{item.price}</span>
-                                        <span className="text-xs">원</span>
+                                        <span className="text-lg mr-0.5 font-bold">{item.price.toLocaleString()}</span>
+                                        <span className="text-sm">원</span>
                                     </p>
                                     <div className="w-18 ml-auto">
                                         {item.active === true &&
@@ -144,7 +144,7 @@ export default function GroupList() {
 
                 <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
                     {totalCount === 0 &&
-                        <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-200 text-gray-500">
+                        <button onClick={() => activeBtn('active')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-800/5 text-teal-600">
                             <span className="font-bold">공동구매 신청</span>
                             <span className="">상품수량을 선택하세요</span>
                         </button>
@@ -154,7 +154,6 @@ export default function GroupList() {
                             <span className="text-lg font-bold">공동구매 신청</span>
                         </Link>
                     }
-
                 </div>
             </div>
             <TopButton isButton={true} />

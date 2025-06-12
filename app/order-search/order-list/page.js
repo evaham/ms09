@@ -35,7 +35,7 @@ export default function OrderList() {
         <div>
             <div className="flex flex-col p-3 mb-48">
                 <p className="my-t text-lg"><span className="font-bold text-teal-600">홍길동(010-1234-5678)</span>님의 신청내역</p>
-                <p className="my-2 text-sm text-gray-500">• 각 내역을 선택 시 상세보기로 이동합니다.</p>
+                <p className="my-2 text-sm text-teal-600">• 각 내역을 선택 시 상세보기로 이동합니다.</p>
                 <ul className="flex flex-col gap-2">
                     {items.map((item, index) => (
                         <li key={index}>
@@ -50,7 +50,7 @@ export default function OrderList() {
                     ))}
                 </ul>
                 <hr className="my-4 border-gray-300" />
-                <div className="mb-48 text-sm px-4 text-gray-500">
+                <div className="mb-48 text-sm px-1 text-gray-500">
                     <p className="mb-1 font-bold">꼭 확인해 주세요!</p>
                     <ul className="list-disc ml-4 text-sm">
                         <li>목표 수량 미달성 시, 공동구매 종료 후 자동 취소 처리됩니다.</li>

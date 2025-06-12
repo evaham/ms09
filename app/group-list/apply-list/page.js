@@ -144,7 +144,7 @@ export default function ApplyList() {
 
     return (
         <div>
-            <div className="px-3 py-1.5 text-sm bg-red-400 leading-tight text-white">
+            <div className="h-11 px-3 py-1.5 text-sm bg-teal-500 leading-tight text-white">
                 ※ 아래 신청버튼을 눌러 공동구매 신청을 완료하세요<br />
                 ※ 신청 시 선택한 수량이 변경될 수 있습니다.
             </div>
@@ -193,9 +193,9 @@ export default function ApplyList() {
                 </ul>
                 {toastMessage && <Toast message={toastMessage} />}
 
-                <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-gray-100 z-20">
+                <div className="fixed bottom-0 left-0 right-0 p-4 pt-2 bg-white z-20">
                     {totalCount === 0 ? (
-                        <button onClick={() => showToast('상품 수량을 선택해주세요.')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-gray-200 text-gray-500 cursor-pointer">
+                        <button onClick={() => showToast('상품 수량을 선택해주세요.')} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-800/5 text-teal-600">
                             <span className="text-lg font-bold">공동구매 신청</span>
                             <span className="">상품수량을 선택하세요</span>
                         </button>

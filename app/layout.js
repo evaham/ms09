@@ -19,10 +19,13 @@ export const metadata = {
   description: "공동구매 페이지",
 };
 
+
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html translate="no" lang="ko-KR" className="touch-manipulation">
       <head>
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, target-densityDpi=medium-dpi" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >

@@ -8,20 +8,22 @@ const NavMenu = () => {
 
     const [isMartInfoOpen, setIsMartInfoOpen] = useState(false);
 
+    
+
     return (
         <div className="sticky top-0 flex w-full h-12 items-center bg-white z-50 shadow-sm">
-            <Link href={"/"} className="flex items-center justify-center w-12 h-full fill-teal-500">
+            <a href={"/"} className="flex items-center justify-center min-w-12 h-full fill-slate-700">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px">
                     <path d="M200-194v-352q0-16.5 6.75-30T228-600l213-162q16.36-13 38.68-13T520-762l213 162q13.5 10.5 20.25 24t6.75 30v352q0 14.75-10.12 24.87Q739.75-159 725-159H589q-14.5 0-24.25-9.75T555-193v-194q0-13.5-9.75-23.25T522-420h-83q-14.5 0-24.25 9.75T405-387v194q0 14.5-9.75 24.25T372-159H235q-14.75 0-24.87-10.13Q200-179.25 200-194Z"/>
                 </svg>
-            </Link>
-            <div onClick={() => setIsMartInfoOpen(!isMartInfoOpen)} className="flex items-center h-full mr-auto cursor-pointer" >
-                <span className="max-w-10/12 mr-1 text-lg font-bold line-clamp-1">투게더 할인 마트</span>
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="fill-gray-500">
+            </a>
+            <div onClick={() => setIsMartInfoOpen(!isMartInfoOpen)} className="relative flex items-center w-auto h-full mr-auto cursor-pointer" >
+                <span className="pr-6 text-lg font-bold line-clamp-1">청천동 진짜 멋진 투게더 할인 마트</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="absolute right-0 w-6 h-6 fill-gray-500">
                     <path d="M460-300h40v-220h-40v220Zm20-276.92q10.46 0 17.54-7.08 7.08-7.08 7.08-17.54 0-10.46-7.08-17.54-7.08-7.07-17.54-7.07-10.46 0-17.54 7.07-7.08 7.08-7.08 17.54 0 10.46 7.08 17.54 7.08 7.08 17.54 7.08Zm.13 456.92q-74.67 0-140.41-28.34-65.73-28.34-114.36-76.92-48.63-48.58-76.99-114.26Q120-405.19 120-479.87q0-74.67 28.34-140.41 28.34-65.73 76.92-114.36 48.58-48.63 114.26-76.99Q405.19-840 479.87-840q74.67 0 140.41 28.34 65.73 28.34 114.36 76.92 48.63 48.58 76.99 114.26Q840-554.81 840-480.13q0 74.67-28.34 140.41-28.34 65.73-76.92 114.36-48.58 48.63-114.26 76.99Q554.81-120 480.13-120Zm-.13-40q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
                 </svg>
             </div>
-            <Link href={"/order-search"} className="flex items-center justify-center w-12 h-full ml-auto fill-gray-500">
+            <Link href={"/order-search"} className="flex items-center justify-center min-w-12 h-full ml-auto fill-slate-700">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 34">
                     <path d="M17.5882 8.23529C17.5882 5.18148 15.1126 2.70588 12.0588 2.70588C9.00497 2.70588 6.52937 5.18148 6.52937 8.23529C6.52937 11.2891 9.00497 13.7647 12.0588 13.7647C15.1126 13.7647 17.5882 11.2891 17.5882 8.23529ZM20.2941 8.23529C20.2941 12.7835 16.607 16.4706 12.0588 16.4706C7.51055 16.4706 3.82349 12.7835 3.82349 8.23529C3.82349 3.68707 7.51055 0 12.0588 0C16.607 0 20.2941 3.68707 20.2941 8.23529Z"/>
                     <path d="M0 30.6618C0 24.0019 5.39892 18.603 12.0588 18.603H13.4706C14.2178 18.603 14.8235 19.2087 14.8235 19.9559C14.8235 20.7031 14.2178 21.3088 13.4706 21.3088H12.0588C6.89334 21.3088 2.70588 25.4963 2.70588 30.6618C2.70588 31.409 2.10015 32.0147 1.35294 32.0147C0.605732 32.0147 0 31.409 0 30.6618Z"/>

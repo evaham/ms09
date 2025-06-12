@@ -64,21 +64,21 @@ const OrderDetailModal = ({onClose}) => {
 
     return (
         <div id='orderDetail' className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-8 z-30">
-            <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
+            <div className="absolute inset-0 bg-slate-800/65" onClick={() => onClose(false)}></div>
             <div className="relative flex flex-col w-full h-[30rem] p-4 rounded-2xl bg-white overflow-hidden">
-                <p className="text-lg font-bold">설 맞이 선물세트 기획전</p>
-                <p className='mt-2 text-sm'>※ 수령기간 : 01.24(금) 09:00 ~ 01.28(화) 20:00</p>
-                <div className="flex-1 overflow-y-auto -mx-4 my-1 p-4 border-y border-gray-200 bg-gray-50 shadow-inner">
+                <p className="line-clamp-1 pr-6 text-lg leading-tight font-bold">설 맞이 선물세트 기획기획기획기획기획전</p>
+                <p className='my-2 text-sm text-slate-600'>※수령기간 : <span className='text-teal-600'>01.24(금) 09:00 ~ 01.28(화) 20:00</span></p>
+                <div className="flex-1 overflow-y-auto -mx-4 my-1 p-4 border-y border-slate-200 bg-slate-50 shadow-inner">
                     <ul className="flex flex-col gap-2">
                         {items.map((item, index) => (
                             <li key={index}>
                                 <div className="relative overflow-hidden flex gap-2 p-4 rounded-lg bg-white shadow">
                                     {item.active === false && (
-                                        <div className="absolute inset-0 flex items-center justify-center bg-black/40 z-10">
-                                            <div className="px-4 bg-gray-800 text-white rounded-full">목표 미달성, 취소처리</div>
+                                        <div className="absolute inset-0 flex items-center justify-center bg-slate-800/65 text-white z-10">
+                                            <p className='px-4 py-2 bg-teal-500 rounded-full'>목표 미달성, 취소처리</p>
                                         </div>
                                     )}
-                                    <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-18 border border-gray-300/50 object-cover aspect-square" />
+                                    <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-18 border border-slate-300/50 object-cover aspect-square" />
                                     <div className="relative flex-1 flex flex-col rounded-lg">
                                         <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                         <div className="flex items-center mt-auto">
@@ -100,9 +100,9 @@ const OrderDetailModal = ({onClose}) => {
                         <div className="font-bold">총 결제 예상금액</div>
                         <div className="ml-auto"><span className="text-2xl font-bold mr-1">{totalPrice.toLocaleString()}</span>원</div>
                     </div>
-                    <p className="flex mt-1 text-sm before:content-['※']">&nbsp;실 결제는 상품 수령기간 내 매장에 방문 후 결제해주세요.</p>
+                    <p className="flex mt-1 text-sm before:content-['※']">실 결제는 상품 수령기간 내 매장에 방문 후 결제해주세요.</p>
                 </div>
-                <button className="absolute top-3 right-3 fill-gray-500" onClick={() => onClose(false)} >
+                <button className="absolute top-3 right-3 fill-slate-500" onClick={() => onClose(false)} >
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>

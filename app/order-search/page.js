@@ -13,7 +13,7 @@ export default function OrederSearch() {
     return (
         <div>
             <div className="flex flex-col p-3">
-                <p className="my-2 font-bold text-lg">고객정보</p>
+                <p className="my-2 font-bold text-lg">공동구매 신청내역</p>
                 <p className="mb-2 text-sm text-teal-600">• 공동구매 신청 시 입력한 정보를 입력해주세요.</p>
                 <div className="flex flex-col p-4 rounded-lg bg-white shadow">
                     <div className="">

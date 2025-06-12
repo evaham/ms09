@@ -108,17 +108,16 @@ export default function GroupList() {
     return (
         <div>
             <div className="flex flex-col p-3 bg-white">
-                <div className="flex justify-center items-center h-14 rounded-full bg-teal-600/30 font-bold text-xl text-white">
-                    <span className="flex px-2 py-1 rounded-sm bg-teal-600 mr-2">신청마감</span>
+                <div className="flex justify-center items-center h-14 rounded-full bg-teal-600/30 text-teal-900 font-bold text-xl">
+                    <span className="mr-3">신청마감</span>
                         {timeLeft.totalSeconds > 0 ? (
-                            <div className="flex justify-center items-center gap-1 text-2xl text-teal-600">
-                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white ">{pad(timeLeft.days)}</div>
-                                <span className='font-normal text-base text-teal-600'>일</span>
-                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.hours)}</div>
-                                <span className='font-normal text-teal-600'>:</span>
-                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.minutes)}</div>
-                                <span className='font-normal text-teal-600'>:</span>
-                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.seconds)}</div>
+                            <div className="flex justify-center items-center gap-1 text-2xl">
+                                <div className="flex justify-center items-center h-9">{pad(timeLeft.days)} <span className='mt-1 ml-0.5 mr-2 font-normal text-base' >일</span></div>
+                                <div className="flex justify-center items-center h-9 rounded">{pad(timeLeft.hours)}</div>
+                                <span className='font-normal'>:</span>
+                                <div className="flex justify-center items-center h-9 rounded">{pad(timeLeft.minutes)}</div>
+                                <span className='font-normal'>:</span>
+                                <div className="flex justify-center items-center h-9 rounded">{pad(timeLeft.seconds)}</div>
                             </div>
                         ) : (
                             <div className="text-pink-600 text-lg">종료</div>

@@ -109,7 +109,7 @@ export default function GroupList() {
         <div>
             <div className="flex flex-col p-3 bg-white">
                 <div className="flex justify-center items-center h-14 rounded-full bg-teal-600/30 font-bold text-xl text-white">
-                    <span className="flex px-2 py-1 rounded-sm rounded-tr-2xl rounded-bl-2xl bg-teal-600 mr-2">신청마감</span>
+                    <span className="flex px-2 py-1 rounded-sm bg-teal-600 mr-2">신청마감</span>
                         {timeLeft.totalSeconds > 0 ? (
                             <div className="flex justify-center items-center gap-1 text-2xl text-teal-600">
                                 <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white ">{pad(timeLeft.days)}</div>

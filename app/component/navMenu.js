@@ -12,11 +12,11 @@ const NavMenu = () => {
 
     return (
         <div className="sticky top-0 flex w-full h-12 items-center bg-white z-50 shadow-sm">
-            <a href={"/"} className="flex items-center justify-center min-w-12 h-full fill-slate-700">
+            <Link href={"/"} className="flex items-center justify-center min-w-12 h-full fill-slate-700">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px">
                     <path d="M200-194v-352q0-16.5 6.75-30T228-600l213-162q16.36-13 38.68-13T520-762l213 162q13.5 10.5 20.25 24t6.75 30v352q0 14.75-10.12 24.87Q739.75-159 725-159H589q-14.5 0-24.25-9.75T555-193v-194q0-13.5-9.75-23.25T522-420h-83q-14.5 0-24.25 9.75T405-387v194q0 14.5-9.75 24.25T372-159H235q-14.75 0-24.87-10.13Q200-179.25 200-194Z"/>
                 </svg>
-            </a>
+            </Link>
             <div onClick={() => setIsMartInfoOpen(!isMartInfoOpen)} className="relative flex items-center w-auto h-full mr-auto cursor-pointer" >
                 <span className="pr-6 text-lg font-bold line-clamp-1">청천동 진짜 멋진 투게더 할인 마트</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className="absolute right-0 w-6 h-6 fill-gray-500">

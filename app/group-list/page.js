@@ -6,6 +6,7 @@ import Link from "next/link";
 import CounterButton from "../component/countButton";
 import TopButton from "../component/topButton";
 import Image from "next/image";
+import { useEffect } from 'react';
 
 export default function GroupList() {
     const [type, setType] = useState('disabled');
@@ -69,14 +70,60 @@ export default function GroupList() {
         )
         );
     };
-
+    // 총 신청 수량 계산
     const totalCount = items.reduce((sum, item) => sum + item.count, 0);
+    
+    
+    // 신청 마감 시각 설정
+  const deadline = new Date('2025-06-30T12:20:45'); // 신청 마감 시간
+  const [timeLeft, setTimeLeft] = useState(getTimeDiff());
+
+  function getTimeDiff() {
+    const now = new Date();
+    const diff = Math.max(0, Math.floor((deadline - now) / 1000)); // 초 단위
+    const days = Math.floor(diff / 86400);
+    const hours = Math.floor((diff % 86400) / 3600);
+    const minutes = Math.floor((diff % 3600) / 60);
+    const seconds = diff % 60;
+
+    return {
+      totalSeconds: diff,
+      days,
+      hours,
+      minutes,
+      seconds,
+    };
+  }
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeDiff());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  const pad = (n) => String(n).padStart(2, '0');
 
     return (
         <div>
-            <div className="flex flex-col p-3 pt-0 bg-white">
-                <div className="flex justify-center items-center -mx-3 h-12 bg-teal-500 font-bold text-xl text-white">
-                    <span className="mr-2">신청마감</span> <span>07일 12:20:45</span>
+            <div className="flex flex-col p-3 bg-white">
+                <div className="flex justify-center items-center h-14 rounded-full bg-teal-600/30 font-bold text-xl text-white">
+                    <span className="flex px-2 py-1 rounded-sm rounded-tr-2xl rounded-bl-2xl bg-teal-600 mr-2">신청마감</span>
+                        {timeLeft.totalSeconds > 0 ? (
+                            <div className="flex justify-center items-center gap-1 text-2xl text-teal-600">
+                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white ">{pad(timeLeft.days)}</div>
+                                <span className='font-normal text-base text-teal-600'>일</span>
+                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.hours)}</div>
+                                <span className='font-normal text-teal-600'>:</span>
+                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.minutes)}</div>
+                                <span className='font-normal text-teal-600'>:</span>
+                                <div className="flex justify-center items-center min-w-9 h-9 rounded bg-white">{pad(timeLeft.seconds)}</div>
+                            </div>
+                        ) : (
+                            <div className="text-pink-600 text-lg">종료</div>
+                        )}
+                    
                 </div>
                 <div className="flex flex-col my-4">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>

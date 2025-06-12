@@ -20,7 +20,7 @@ export default function GroupList() {
             "orderlimit": 2,
             "count": 0,
             "tag":["500개한정","구매제한2개"],
-            "goodsimg": "../img/test1.jpg",
+            "goodsimg": "./img/test1.jpg",
             "limitpieces": 500,
             "orderpieces": 312,
             "active": true
@@ -32,7 +32,7 @@ export default function GroupList() {
             "orderlimit": 90,
             "count": 0,
             "tag":["200개한정"],
-            "goodsimg": "../img/test2.jpg",
+            "goodsimg": "./img/test2.jpg",
             "limitpieces": 200,
             "orderpieces": 200,
             "active": false
@@ -44,7 +44,7 @@ export default function GroupList() {
             "orderlimit": 99,
             "count": 0,
             "tag": [],
-            "goodsimg": "../img/test3.jpg",
+            "goodsimg": "./img/test3.jpg",
             "limitpieces": 100,
             "orderpieces": 200,
             "active": true
@@ -56,7 +56,7 @@ export default function GroupList() {
             "orderlimit": 1,
             "count": 0,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "../img/test4.jpg",
+            "goodsimg": "./img/test4.jpg",
             "limitpieces": 100,
             "orderpieces": 50,
             "active": true

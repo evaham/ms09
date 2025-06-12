@@ -24,7 +24,7 @@ const OrderDetailModal = ({onClose}) => {
             "price": 150000,
             "count": 5,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test1.jpg",
+            "goodsimg": "../img/test1.jpg",
             "active": true
         },
         {
@@ -33,7 +33,7 @@ const OrderDetailModal = ({onClose}) => {
             "price": 50000,
             "count": 3,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test2.jpg",
+            "goodsimg": "../img/test2.jpg",
             "active": true
         },
         {
@@ -42,7 +42,7 @@ const OrderDetailModal = ({onClose}) => {
             "price": 50000,
             "count": 3,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test3.jpg",
+            "goodsimg": "../img/test3.jpg",
             "active": true
         },
         {
@@ -51,7 +51,7 @@ const OrderDetailModal = ({onClose}) => {
             "price": 50000,
             "count": 3,
             "tag":["150개한정","구매제한1개"],
-            "goodsimg": "/img/test4.jpg",
+            "goodsimg": "../img/test4.jpg",
             "active": false
         },
 

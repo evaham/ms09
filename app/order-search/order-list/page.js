@@ -50,7 +50,7 @@ export default function OrderList() {
                     ))}
                 </ul>
                 <hr className="my-4 border-gray-300" />
-                <div className="mb-48 text-sm px-1 text-gray-500">
+                <div className="mb-48 text-sm text-gray-500">
                     <p className="mb-1 font-bold">꼭 확인해 주세요!</p>
                     <ul className="list-disc ml-4 text-sm">
                         <li>목표 수량 미달성 시, 공동구매 종료 후 자동 취소 처리됩니다.</li>

@@ -186,7 +186,7 @@ export default function Home() {
                   )}
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/65 text-lg text-white z-10">
-                  <p className="px-4 py-2 leading-tight bg-teal-500 rounded-full font-bold">{item.startDay} 오픈</p>
+                  <p className="px-4 py-2 leading-tight bg-teal-600/90 rounded-full font-bold">{item.startDay} 오픈</p>
                 </div>
               </Link>
             </li>
@@ -215,7 +215,7 @@ export default function Home() {
                   )}
                 </div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/65 text-xl text-white z-10">
-                  <p className="flex flex-col items-center px-6 py-2 leading-tight bg-slate-800 rounded-full">
+                  <p className="flex flex-col items-center px-6 py-2 leading-none bg-slate-800/80 rounded-full">
                     <span className="font-bold">공동구매 마감!</span>
                     <span className="mt-1 text-base">공동구매 신청내역에서 확인</span>
                   </p>

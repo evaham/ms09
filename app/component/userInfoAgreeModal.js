@@ -15,10 +15,10 @@ const UserInfoAgreeModal = ({onClose}) => {
 
     return (
         <div id="userInfoAgree" className="fixed inset-0 flex flex-col items-center justify-center p-3 pt-14 z-30">
-            <div className="absolute inset-0 bg-black/40" onClick={() => onClose(false)}></div>
-            <div className="relative flex flex-col w-full h-[30rem] p-4 rounded-2xl bg-gray-50 overflow-hidden">
+            <div className="absolute inset-0 bg-slate-800/65" onClick={() => onClose(false)}></div>
+            <div className="relative flex flex-col w-full h-[30rem] p-4 rounded-2xl bg-slate-50 overflow-hidden">
                 <p className="my-2 text-lg font-bold">개인정보 수집·이용 동의서</p>
-                <div className="flex-1 overflow-y-auto p-4 border border-gray-100 bg-white rounded-lg">
+                <div className="flex-1 overflow-y-auto p-4 border border-slate-100 bg-white rounded-lg">
                     ㈜투게더스는 『개인정보보호법』 제15조 개인정보의 수집·이용에 따라 귀하의 개인정보를 수집하고자 합니다.
                     <br /><br />
                     귀하께서는 아래 개인정보의 수집 항목, 이용 목적, 이용기간을 확인하고, 이용동의서에 체크해 주시기 바랍니다.
@@ -55,7 +55,7 @@ const UserInfoAgreeModal = ({onClose}) => {
                     <br />
                     ② 개인정보 처리에 대한 문의는 고객센터를 통해 가능합니다.
                 </div>
-                <button className="absolute top-3 right-3 fill-gray-500" onClick={() => onClose(false)} >
+                <button className="absolute top-3 right-3 fill-slate-500" onClick={() => onClose(false)} >
                     <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                 </button>
             </div>

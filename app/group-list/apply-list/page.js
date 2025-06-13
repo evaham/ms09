@@ -151,12 +151,12 @@ export default function ApplyList() {
             <div className="flex flex-col p-3 pt-1">
 
                 <p className="my-2 text-lg font-bold">공동구매 신청</p>
-                <p className="mb-2 text-sm text-gray-500">설 맞이 선물세트 기획전</p>
+                <p className="mb-2 text-sm text-slate-500">설 맞이 선물세트 기획전</p>
                 <ul className="flex flex-col gap-2 mb-48">
                     {items.filter(item => item.active).map((item, index) => (
                         <li key={index}>
                             <div className="flex gap-2 p-4 rounded-lg bg-white shadow">
-                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 h-20 border border-gray-300/50 object-cover aspect-square" />
+                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 h-20 border border-slate-300/50 object-cover aspect-square" />
                                 <div className="relative flex-1 flex flex-col rounded-lg">
                                     <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                     <div className='flex'>
@@ -172,7 +172,7 @@ export default function ApplyList() {
                                             <CounterButton key={item.id} item={item} onChange={updateCount} />
                                         </div>
                                     </div>
-                                    <button className="absolute -top-0.5 -right-0.5 fill-gray-500" onClick={() => handleDelete(item.id)}>
+                                    <button className="absolute -top-0.5 -right-0.5 fill-slate-500" onClick={() => handleDelete(item.id)}>
                                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="m256-236-20-20 224-224-224-224 20-20 224 224 224-224 20 20-224 224 224 224-20 20-224-224-224 224Z"/></svg>
                                     </button>
                                 </div>
@@ -181,7 +181,7 @@ export default function ApplyList() {
                     ))}
 
                     <li>
-                        <hr className="my-4 border-gray-300" />
+                        <hr className="my-4 border-slate-300" />
                         <div className="mb-24 p-4 rounded-lg bg-white shadow">
                             <div className="flex">
                                 <div className="font-bold">총 결제 예상금액</div>

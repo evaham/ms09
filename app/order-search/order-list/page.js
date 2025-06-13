@@ -41,16 +41,16 @@ export default function OrderList() {
                         <li key={index}>
                             <div onClick={() => setIsOrderDetailOpen(!isOrderDetailOpen)} className="relative flex gap-1 flex-col w-full px-4 py-3 rounded-lg bg-white shadow">
                                 <div className="pr-4 font-bold line-clamp-1">{item.name}</div>
-                                <span className="mt-2 text-sm text-gray-500">{item.date} 신청</span>
-                                <div className="position absolute right-2 top-0 bottom-0 flex items-center justify-center fill-gray-500">
+                                <span className="mt-2 text-sm text-slate-500">{item.date} 신청</span>
+                                <div className="position absolute right-2 top-0 bottom-0 flex items-center justify-center fill-slate-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg>
                                 </div>
                             </div>
                         </li>
                     ))}
                 </ul>
-                <hr className="my-4 border-gray-300" />
-                <div className="mb-48 text-sm text-gray-500">
+                <hr className="my-4 border-slate-300" />
+                <div className="mb-48 text-sm text-slate-500">
                     <p className="mb-1 font-bold">꼭 확인해 주세요!</p>
                     <ul className="list-disc ml-4 text-sm">
                         <li>목표 수량 미달성 시, 공동구매 종료 후 자동 취소 처리됩니다.</li>

@@ -108,8 +108,8 @@ export default function GroupList() {
     return (
         <div>
             <div className="flex flex-col p-3 bg-white">
-                <div className="flex justify-center items-center h-14 rounded-full bg-teal-600/30 text-teal-900 font-bold text-xl">
-                    <span className="mr-3">신청마감</span>
+                <div className="flex justify-center items-center gap-3 h-14 rounded-full bg-teal-600/15 text-teal-700 font-bold text-xl">
+                    <span>신청마감</span>
                         {timeLeft.totalSeconds > 0 ? (
                             <div className="flex justify-center items-center gap-1 text-2xl">
                                 <div className="flex justify-center items-center h-9">{pad(timeLeft.days)} <span className='mt-1 ml-0.5 mr-2 font-normal text-base' >일</span></div>
@@ -138,8 +138,8 @@ export default function GroupList() {
                 <ul className="grid grid-cols-2 gap-2 gap-y-6 mb-48">
                     {items.map((item, index) => (
                         <li key={index} className="flex flex-col ">
-                            <Link href={`/group-list/goods-Info`} className="relative overflow-hidden rounded-xl border border-gray-200/50 ">
-                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-gray-300 object-cover aspect-square" />
+                            <Link href={`/group-list/goods-Info`} className="relative overflow-hidden rounded-xl border border-slate-200/50 ">
+                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-slate-300 object-cover aspect-square" />
                                 <div className="absolute top-1 left-1 flex flex-wrap gap-1 text-sm">
                                     {item.tag.map((i) => (
                                         <span key={i} className='flex justify-center items-center p-0.5 rounded-sm leading-none bg-red-500 bg-blend-lighten text-white'>{i}</span>
@@ -160,7 +160,7 @@ export default function GroupList() {
                                     </div>
                                     <span className=" leading-tight"><span className="font-bold">{item.orderpieces}</span>/{item.limitpieces}</span>
                                 </div>
-                                <div className="w-full h-10 text-gray-700 line-clamp-2 leading-tight">{item.name}</div>
+                                <div className="w-full h-10 text-slate-700 line-clamp-2 leading-tight">{item.name}</div>
                                 <div className="flex items-center">
                                     <p className="flex items-center flex-1">
                                         <span className="text-lg mr-0.5 font-bold">{item.price.toLocaleString()}</span>
@@ -172,12 +172,12 @@ export default function GroupList() {
                                         }
                                         {item.active === false &&
                                             <div className="relative flex w-full h-6">
-                                                <button className="flex items-center justify-center w-6 h-6 rounded-full bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-gray-400"><path d="M200-440v-80h560v80H200Z" /></svg>
+                                                <button className="flex items-center justify-center w-6 h-6 rounded-full bg-slate-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-slate-400"><path d="M200-440v-80h560v80H200Z" /></svg>
                                                 </button>
-                                                <p className="flex-1 flex items-center justify-center inset-0 mx-0.5  text-gray-300">0</p>
-                                                <button className="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-gray-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-gray-400"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg>
+                                                <p className="flex-1 flex items-center justify-center inset-0 mx-0.5  text-slate-300">0</p>
+                                                <button className="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-slate-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-slate-400"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg>
                                                 </button>
                                             </div>
                                         }
@@ -196,7 +196,7 @@ export default function GroupList() {
                         </button>
                     }
                     {totalCount > 0 && 
-                        <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-gray-50">
+                        <Link href={"/group-list/apply-list"} className="flex flex-col items-center justify-center w-full h-14 border rounded-lg text-center leading-tight bg-teal-500 text-slate-50">
                             <span className="text-lg font-bold">공동구매 신청</span>
                         </Link>
                     }

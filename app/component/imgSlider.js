@@ -45,14 +45,14 @@ const ImageSlider = () => {
                 <Image key={index} src={src} width={300} height={300} alt="상품 이미지" className="w-full object-cover aspect-square" style={{ flex: '0 0 100%' }} />
             ))}
             </div>
-            <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/50 text-white py-3 px-1 z-10">
+            <button onClick={prevSlide} className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-slate-950/50 text-white py-3 px-1 z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#fff"><path d="M560-276 356-480l204-204 20 20-184 184 184 184-20 20Z"/></svg>            </button>
-            <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/50 text-white py-3 px-1 z-10">
+            <button onClick={nextSlide} className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-slate-950/50 text-white py-3 px-1 z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#fff"><path d="M540-480 356-664l20-20 204 204-204 204-20-20 184-184Z"/></svg>
             </button>
             <div className="absolute bottom-2 flex space-x-2">
             {images.map((_, index) => (
-                <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-teal-500' : 'bg-gray-600/50' }`}></span>
+                <span key={index} className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-teal-500' : 'bg-slate-500/50' }`}></span>
             ))}
             </div>
         </div>

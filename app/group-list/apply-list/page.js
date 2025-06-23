@@ -160,8 +160,10 @@ export default function ApplyList() {
                                 <div className="relative flex-1 flex flex-col rounded-lg">
                                     <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                     <div className='flex'>
-                                        {item.tag.map((i) => (
-                                            <span key={i} className="mr-2 text-sm text-red-500">{i}</span>
+                                        {item.tag.map((i,index) => (
+                                            <span key={i} className="flex items-center text-sm text-red-500">{i}
+                                                {index < item.tag.length - 1 && <span className="inline-block mx-2 w-[2px] h-3 bg-gray-300"></span>}
+                                            </span>
                                         ))}
                                     </div>
                                     <div className="flex mt-auto">

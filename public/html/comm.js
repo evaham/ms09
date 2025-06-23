@@ -48,16 +48,19 @@ layerPopup = (e) => {
 
 // 맨위로 이동
 goTop = () => {
-    const position = document.documentElement.scrollTop || document.body.scrollTop;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    if (position > 0) {
-        window.requestAnimationFrame(() => {
-            // 스크롤 위치를 10% 줄입니다.
-            window.scrollTo(0, position - position / 10);
-            // 재귀 호출
-            goTop();
-        });
-    }
+    
+    // const position = document.documentElement.scrollTop || document.body.scrollTop;
+
+    // if (position > 0) {
+    //     window.requestAnimationFrame(() => {
+    //         // 스크롤 위치를 10% 줄입니다.
+    //         window.scrollTo(0, position - position / 10);
+    //         // 재귀 호출
+    //         goTop();
+    //     });
+    // }
 };
 
 // 공동구매신청 버튼 활성화

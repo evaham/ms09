@@ -26,26 +26,26 @@ export default function GoodsInfo() {
                         </div>
                         <div className="flex flex-col mt-1">
                             <dl className="flex">
-                                <dt>달성량/목표수량</dt>
+                                <dt className="text-slate-500">달성량/목표수량</dt>
                                 <dd className="ml-auto"><span className="font-bold">19</span>/100개</dd>
                             </dl>
                             <dl className="flex">
-                                <dt>상품한정수량</dt>
+                                <dt className="text-slate-500">상품한정수량</dt>
                                 <dd className="ml-auto">150개</dd>
                             </dl>
                             <dl className="flex">
-                                <dt>1인 구매 제한</dt>
+                                <dt className="text-slate-500">1인 구매 제한</dt>
                                 <dd className="ml-auto">1개</dd>
                             </dl>
                         </div>
                     </div>
                     <div className="flex flex-col p-4 rounded-lg bg-white">
                         <dl className="flex">
-                            <dt>신청기간</dt>
+                            <dt className="text-slate-500">신청기간</dt>
                             <dd className="ml-auto">01.16(목)~01.23(목)</dd>
                         </dl>
                         <dl className="flex">
-                            <dt>수령기간</dt>
+                            <dt className="text-slate-500">수령기간</dt>
                             <dd className="ml-auto">01.16(목)~01.23(목)</dd>
                         </dl>
                     </div>

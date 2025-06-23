@@ -126,12 +126,12 @@ export default function GroupList() {
                 </div>
                 <div className="flex flex-col my-4">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
-                    <div className="flex text-slate-500">
-                        <span>• 신청기간</span>
+                    <div className="flex">
+                        <span className='text-slate-500'>• 신청기간</span>
                         <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
-                    <div className="flex text-slate-500">
-                        <span>• 수령기간</span>
+                    <div className="flex">
+                        <span className='text-slate-500'>• 수령기간</span>
                         <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                 </div>

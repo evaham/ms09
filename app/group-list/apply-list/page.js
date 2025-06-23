@@ -151,7 +151,7 @@ export default function ApplyList() {
             <div className="flex flex-col p-3 pt-1">
 
                 <p className="my-2 text-lg font-bold">공동구매 신청</p>
-                <p className="mb-2 text-sm text-slate-500">설 맞이 선물세트 기획전</p>
+                <p className="mb-2 text-slate-500">설 맞이 선물세트 기획전</p>
                 <ul className="flex flex-col gap-2 mb-48">
                     {items.filter(item => item.active).map((item, index) => (
                         <li key={index}>
@@ -161,7 +161,7 @@ export default function ApplyList() {
                                     <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
                                     <div className='flex'>
                                         {item.tag.map((i) => (
-                                            <span key={i} className='mr-2 text-sm text-red-500'>{i}</span>
+                                            <span key={i} className="mr-2 text-sm text-red-500">{i}</span>
                                         ))}
                                     </div>
                                     <div className="flex mt-auto">

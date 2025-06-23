@@ -154,7 +154,7 @@ export default function Home() {
                     </div>
                   ))}
                   {item.imgGroup.length > 5 && (
-                    <div className="w-16 h-16 flex items-center justify-center bg-teal-100 rounded-full text-teal-600 text-lg">
+                    <div className="w-16 h-16 flex items-center justify-center bg-slate-200 rounded-full text-slate-600 text-lg">
                       +{item.imgGroup.length - 5}
                     </div>
                   )}
@@ -180,12 +180,12 @@ export default function Home() {
                     </div>
                   ))}
                   {item.imgGroup.length > 5 && (
-                    <div className="w-16 h-16 flex items-center justify-center bg-teal-100 rounded-full text-teal-600 text-lg">
+                    <div className="w-16 h-16 flex items-center justify-center bg-slate-200 rounded-full text-slate-600 text-lg">
                       +{item.imgGroup.length - 5}
                     </div>
                   )}
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/65 text-lg text-white z-10">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/50 text-lg text-white z-10">
                   <p className="px-4 py-2 leading-tight bg-teal-600/90 rounded-full font-bold">{item.startDay} 오픈</p>
                 </div>
               </Link>
@@ -209,13 +209,13 @@ export default function Home() {
                     </div>
                   ))}
                   {item.imgGroup.length > 5 && (
-                    <div className="w-16 h-16 flex items-center justify-center bg-slate-100 rounded-full text-teal-600 text-lg">
+                    <div className="w-16 h-16 flex items-center justify-center bg-slate-200 rounded-full text-slate-600 text-lg">
                       +{item.imgGroup.length - 5}
                     </div>
                   )}
                 </div>
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/65 text-xl text-white z-10">
-                  <p className="flex flex-col items-center px-6 py-2 leading-none bg-slate-800/80 rounded-full">
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800/50 text-xl text-white z-10">
+                  <p className="flex flex-col items-center px-6 py-2 leading-none bg-slate-800/90 rounded-full">
                     <span className="font-bold">공동구매 마감!</span>
                     <span className="mt-1 text-base">공동구매 신청내역에서 확인</span>
                   </p>
@@ -230,10 +230,9 @@ export default function Home() {
 
         <ul>
           <li className="flex items-center justify-center w-full h-48 p-4 bg-slate-200 rounded-lg">
-            <p className="font-bold text-teal-600">진행예정 공동구매가 없습니다.</p>
+            <p className="font-bold text-teal-600 text-xl">진행예정 공동구매가 없습니다.</p>
           </li>
         </ul>
-
       </div>
       <TopButton isButton={false} />
     </div>

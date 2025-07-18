@@ -141,7 +141,7 @@ export default function Home() {
         <ul className="flex flex-col gap-2 mb-4">
           {items.map((item, index) => (
             <li key={index}>
-              <Link className="relative overflow-hidden flex gap-2 flex-col w-full py-3 px-4 rounded-lg bg-white shadow" href={`/group-list/`}>
+              <Link className=" relative overflow-hidden flex gap-2 flex-col w-full py-3 px-4 rounded-lg bg-white shadow" href={`/group-list/`}>
                 <div className="flex items-center">
                   <div className="flex items-center justify-center px-2 py-1 mr-2 rounded-full border border-teal-500 text-sm font-bold leading-none text-teal-500">{item.endDayCount}</div>
                   <div className="text-slate-500 line-clamp-1 tracking-tight">{item.startDay} ~ {item.endDay}</div>

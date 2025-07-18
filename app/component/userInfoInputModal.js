@@ -24,7 +24,7 @@ const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
     };
 
     return (
-        <div id="userInfoInput" className="fixed inset-0 z-30 flex flex-col pt-20 ">
+        <div id="userInfoInput" className="fixed inset-0 z-30 flex flex-col pt-20">
             <div className="absolute inset-0 bg-slate-800/65" onClick={() => onClose(false)}></div>
             <div className="mt-auto p-4 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="my-2 font-bold">고객정보</p>
@@ -36,6 +36,8 @@ const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
                         {text.length} / {maxLength}
                         </span>
                     </div>
+
+
                 </div>
                 <div className="mt-2">
                     <label className="text-sm text-slate-500">휴대번호 (숫자만 입력 가능)</label>

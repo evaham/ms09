@@ -24,7 +24,7 @@ const UserInfoInputModal = ({onClose, infoAgreeOpen}) => {
     };
 
     return (
-        <div id="userInfoInput" className="fixed top-0 right-0 bottom-0 left-0 z-30">
+        <div id="userInfoInput" className="fixed inset-0 h-lvh z-30">
             <div className="absolute inset-0 bg-slate-800/65" onClick={() => onClose(false)}></div>
             <div className="absolute bottom-0 left-0 right-0 p-4 pb-8 rounded-t-2xl bg-white slide-top">
                 <p className="my-2 font-bold">고객정보</p>

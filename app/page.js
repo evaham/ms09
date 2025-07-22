@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import TopButton from "./component/topButton";
+import ShortcutButton from "./component/shortcutButton";
 
 export default function Home() {
   // const data = require('/public/data/db.json')
@@ -234,6 +235,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
+      <ShortcutButton />
       <TopButton isButton={false} />
     </div>
   );

@@ -30,14 +30,8 @@
     --color-slate-950: oklch(0.129 0.042 264.695);
     --color-gray-50: oklch(0.985 0.002 247.839);
     --color-gray-100: oklch(0.967 0.003 264.542);
-    --color-gray-200: oklch(0.928 0.006 264.531);
     --color-gray-300: oklch(0.872 0.01 258.338);
-    --color-gray-400: oklch(0.707 0.022 261.325);
     --color-gray-500: oklch(0.551 0.027 264.364);
-    --color-gray-600: oklch(0.446 0.03 256.802);
-    --color-gray-700: oklch(0.373 0.034 259.733);
-    --color-gray-800: oklch(0.278 0.033 256.848);
-    --color-gray-950: oklch(0.13 0.028 261.692);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
@@ -58,7 +52,6 @@
     --font-weight-bold: 700;
     --tracking-tight: -0.025em;
     --leading-tight: 1.25;
-    --radius-xs: 0.125rem;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
@@ -278,6 +271,9 @@
   .bottom-4 {
     bottom: calc(var(--spacing) * 4);
   }
+  .bottom-24 {
+    bottom: calc(var(--spacing) * 24);
+  }
   .bottom-26 {
     bottom: calc(var(--spacing) * 26);
   }
@@ -307,6 +303,9 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
   }
   .-mx-3 {
     margin-inline: calc(var(--spacing) * -3);
@@ -643,6 +642,9 @@
   .border-teal-500 {
     border-color: var(--color-teal-500);
   }
+  .bg-\[\#f43f5e\] {
+    background-color: #f43f5e;
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -831,6 +833,9 @@
   }
   .pt-14 {
     padding-top: calc(var(--spacing) * 14);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
   }
   .pr-4 {
     padding-right: calc(var(--spacing) * 4);
@@ -1021,20 +1026,6 @@ body {
 }
 .slide-top {
   animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-.link-panel {
-  position: relative;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: calc(var(--spacing) * 2);
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  background-color: var(--color-white);
-  padding-inline: calc(var(--spacing) * 4);
-  padding-block: calc(var(--spacing) * 3);
-  --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
-  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 @property --tw-translate-x {
   syntax: "*";

@@ -51,14 +51,14 @@ export default function GroupList() {
         },
         {
             "id": 4,
-            "name": "[농협] 안심 정육세트",
+            "name": "[농협] 안심 정육세트정육세트정육세트정육세트",
             "price": 73000,
             "orderlimit": 1,
             "count": 0,
             "tag":["150개한정","구매제한1개"],
             "goodsimg": "./img/test4.jpg",
             "limitpieces": 100,
-            "orderpieces": 50,
+            "orderpieces": 20,
             "active": true
         },
     ]);
@@ -75,7 +75,7 @@ export default function GroupList() {
     
     
     // 신청 마감 시각 설정
-  const deadline = new Date('2025-06-30T12:20:45'); // 신청 마감 시간
+  const deadline = new Date('2025-09-30T12:20:45'); // 신청 마감 시간
   const [timeLeft, setTimeLeft] = useState(getTimeDiff());
 
   function getTimeDiff() {
@@ -107,7 +107,7 @@ export default function GroupList() {
 
     return (
         <div>
-            <div className="flex flex-col p-3 bg-white">
+            <div className="flex flex-col p-3">
                 <div className="flex justify-center items-center gap-3 h-14 rounded-full bg-teal-600/15 text-teal-700 font-bold text-xl">
                     <span>신청마감</span>
                         {timeLeft.totalSeconds > 0 ? (
@@ -126,61 +126,62 @@ export default function GroupList() {
                 </div>
                 <div className="flex flex-col my-4">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
-                    <div className="flex">
+                    <div className="flex items-center">
                         <span className='text-slate-500'>• 신청기간</span>
                         <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                     <div className="flex">
                         <span className='text-slate-500'>• 수령기간</span>
-                        <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
+                        <span className="ml-auto text-rose-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                 </div>
-                <ul className="grid grid-cols-2 gap-2 gap-y-6 mb-48">
+                <ul className="grid grid-cols-1 gap-2 mb-48 divide-y divide-slate-200">
                     {items.map((item, index) => (
-                        <li key={index} className="flex flex-col ">
-                            <Link href={`/group-list/goods-Info`} className="relative overflow-hidden rounded-xl border border-slate-200/50 ">
-                                <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-slate-300 object-cover aspect-square" />
-                                <div className="absolute top-1 left-1 flex flex-wrap gap-1 text-sm">
-                                    {item.tag.map((i) => (
-                                        <span key={i} className='flex justify-center items-center p-0.5 rounded-sm leading-none bg-red-500 bg-blend-lighten text-white'>{i}</span>
-                                    ))}
-                                </div>
-                                {item.active === false &&
-                                    <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-2xl font-bold text-white'>마 감</div>
-                                }
-                            </Link>
-                            <div className="flex gap-1 px-1 flex-col">
-                                <div className="flex items-center mt-1">
-                                    <div className="overflow-hidden basis-full h-3.5 mr-2 rounded-full bg-teal-900/15">
-                                        <div className="flex items-center justify-center h-full rounded-full bg-teal-500" style={{width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%`}}>
-                                            {(item.orderpieces / item.limitpieces) * 100 >= 100 && (
-                                                <span className="text-white text-xs">목표달성</span>
-                                            )}
-                                        </div>
-                                    </div>
-                                    <span className=" leading-tight"><span className="font-bold">{item.orderpieces}</span>/{item.limitpieces}</span>
-                                </div>
-                                <div className="w-full h-10 text-slate-700 line-clamp-2 leading-tight">{item.name}</div>
+                        <li key={index} className="">
+                            <div className="flex flex-col gap-2 p-4 rounded-lg bg-white shadow">
                                 <div className="flex items-center">
-                                    <p className="flex items-center flex-1">
-                                        <span className="text-lg mr-0.5 font-bold">{item.price.toLocaleString()}</span>
-                                        <span className="text-sm">원</span>
-                                    </p>
-                                    <div className="w-18 ml-auto">
-                                        {item.active === true &&
-                                            <CounterButton key={item.id} item={item} onChange={updateCount} />
-                                        }
-                                        {item.active === false &&
-                                            <div className="relative flex w-full h-6">
-                                                <button className="flex items-center justify-center w-6 h-6 rounded-full bg-slate-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-slate-400"><path d="M200-440v-80h560v80H200Z" /></svg>
-                                                </button>
-                                                <p className="flex-1 flex items-center justify-center inset-0 mx-0.5  text-slate-300">0</p>
-                                                <button className="flex items-center justify-center w-6 h-6 ml-auto rounded-full bg-slate-100">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -960 960 960" width="18px" className="fill-slate-400"><path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" /></svg>
-                                                </button>
+                                    <div className="relative overflow-hidden basis-full h-4 rounded-full bg-gray-200">
+                                        {(item.orderpieces / item.limitpieces) * 100 < 100 && (
+                                            <div className={"flex items-center h-full bg-rose-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                                <div className="absolute inset-0 flex items-center">
+                                                    <span className="ml-2 text-xs font-bold">달성까지 {(item.limitpieces - item.orderpieces)} 개 남음</span>
+                                                </div>
                                             </div>
+                                        )}
+                                        {(item.orderpieces / item.limitpieces) * 100 >= 100 && (
+                                            <div className={"flex items-center h-full bg-teal-500"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                                <div className="absolute inset-0 flex items-center">
+                                                    <span className="ml-2 text-white text-xs font-bold">{item.orderpieces} 개 신청중</span>
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="flex gap-4">
+                                    <Link href={`/group-list/goods-Info`} className="relative overflow-hidden w-34 h-34 rounded-lg bg-slate-300">
+                                        <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-full bg-slate-200 object-cover aspect-square brightness-[0.94]" />
+                                        <div className="absolute right-1 bottom-1 rounded-full flex items-center justify-center w-8 h-8 bg-white/75 border border-black/10">
+                                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#000"><path d="M400-320q100 0 170-70t70-170q0-100-70-170t-170-70q-100 0-170 70t-70 170q0 100 70 170t170 70Zm-42-212-57-56q-12-12-28-12t-28 12q-12 12-12.5 28t11.5 28l85 85q12 12 28.5 12t28.5-12l170-169q12-12 12-28.5T556-673q-12-12-28.5-12T499-673L358-532Zm42 292q-134 0-227-93T80-560q0-134 93-227t227-93q134 0 227 93t93 227q0 56-17.5 105.5T653-364l199 199q12 12 12 28.5T852-108q-12 12-28.5 12T795-108L596-307q-41 32-90.5 49.5T400-240Zm0-320Z" /></svg>
+                                        </div>
+                                        {item.active === false &&
+                                            <div className='absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-2xl font-bold text-white'>마 감</div>
                                         }
+                                    </Link>
+                                    <div className="flex-1 flex flex-col gap-0.5">
+                                        <div className="w-full text-slate-700 leading-tight">{item.name}</div>
+                                        <div className="flex gap-1 text-sm">
+                                            {item.tag.map((i) => (
+                                                <span key={i} className='flex justify-center items-center p-1 rounded-sm leading-none bg-slate-100 text-xs text-[#006be3] font-bold'>{i}</span>
+                                            ))}
+                                        </div>
+                                        <p className="flex items-center">
+                                            <span className="text-3xl text-red-500 mr-0.5 font-bold">{item.price.toLocaleString()}</span>
+                                            <span className="pt-1.5">원</span>
+                                        </p>
+                                        <div className="mt-auto">
+                                            <CounterButton key={item.id} item={item} onChange={updateCount} active={item.active} />
+                                        </div>
                                     </div>
                                 </div>
                             </div>

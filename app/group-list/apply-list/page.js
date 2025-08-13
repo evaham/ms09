@@ -159,19 +159,19 @@ export default function ApplyList() {
                                 <Image src={item.goodsimg} width={300} height={300} alt="상품 이미지" className="w-20 h-20 border border-slate-300/50 object-cover aspect-square" />
                                 <div className="relative flex-1 flex flex-col rounded-lg">
                                     <div className="line-clamp-2 leading-tight pr-8">{item.name}</div>
-                                    <div className='flex'>
+                                    <div className="flex">
                                         {item.tag.map((i,index) => (
                                             <span key={i} className="flex items-center text-sm text-red-500">{i}
                                                 {index < item.tag.length - 1 && <span className="inline-block mx-2 w-[2px] h-3 bg-gray-300"></span>}
                                             </span>
                                         ))}
                                     </div>
-                                    <div className="flex mt-auto">
+                                    <div className="flex mt-auto items-center">
                                         <div className="mr-auto">
                                             <span className="text-lg font-bold mr-1">{item.price.toLocaleString()}</span>원
                                         </div>
-                                        <div className="w-20">
-                                            <CounterButton key={item.id} item={item} onChange={updateCount} />
+                                        <div className="w-24">
+                                            <CounterButton key={item.id} item={item} onChange={updateCount} active={item.active} />
                                         </div>
                                     </div>
                                     <button className="absolute -top-0.5 -right-0.5 fill-slate-500" onClick={() => handleDelete(item.id)}>

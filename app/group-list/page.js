@@ -128,11 +128,11 @@ export default function GroupList() {
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
                     <div className="flex items-center">
                         <span className='text-slate-500'>• 신청기간</span>
-                        <span className="ml-auto">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
+                        <span className="ml-auto text-blue-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                     <div className="flex">
                         <span className='text-slate-500'>• 수령기간</span>
-                        <span className="ml-auto text-rose-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
+                        <span className="ml-auto text-blue-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mb-48 divide-y divide-slate-200">
@@ -142,7 +142,7 @@ export default function GroupList() {
                                 <div className="flex items-center">
                                     <div className="relative overflow-hidden basis-full h-4 rounded-full bg-gray-200">
                                         {(item.orderpieces / item.limitpieces) * 100 < 100 && (
-                                            <div className={"flex items-center h-full bg-rose-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                            <div className={"flex items-center h-full bg-yellow-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
                                                 <div className="absolute inset-0 flex items-center">
                                                     <span className="ml-2 text-xs font-bold">달성까지 {(item.limitpieces - item.orderpieces)} 개 남음</span>
                                                 </div>

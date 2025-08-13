@@ -122,17 +122,16 @@ export default function GroupList() {
                         ) : (
                             <div className="text-pink-600 text-lg">종료</div>
                         )}
-                    
                 </div>
-                <div className="flex flex-col my-4">
+                <div className="flex flex-col -mx-3 my-3 p-3 bg-white ">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
                     <div className="flex items-center">
-                        <span className='text-slate-500'>• 신청기간</span>
-                        <span className="ml-auto text-blue-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
+                        <span className='text-sm text-slate-400 font-bold'>• 신청기간</span>
+                        <span className=" ml-4 text-blue-700">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
-                    <div className="flex">
-                        <span className='text-slate-500'>• 수령기간</span>
-                        <span className="ml-auto text-blue-600">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
+                    <div className="flex items-center">
+                        <span className='text-sm text-slate-400 font-bold'>• 수령기간</span>
+                        <span className="ml-4 text-blue-700">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                 </div>
                 <ul className="grid grid-cols-1 gap-2 mb-48 divide-y divide-slate-200">

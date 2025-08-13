@@ -141,7 +141,7 @@ export default function GroupList() {
                                 <div className="flex items-center">
                                     <div className="relative overflow-hidden basis-full h-4 rounded-full bg-gray-200">
                                         {(item.orderpieces / item.limitpieces) * 100 < 100 && (
-                                            <div className={"flex items-center h-full bg-yellow-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                            <div className={"flex items-center h-full bg-pink-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
                                                 <div className="absolute inset-0 flex items-center">
                                                     <span className="ml-2 text-xs font-bold">달성까지 {(item.limitpieces - item.orderpieces)} 개 남음</span>
                                                 </div>

@@ -51,7 +51,7 @@ export default function GroupList() {
         },
         {
             "id": 4,
-            "name": "[농협] 안심 정육세트정육세트정육세트정육세트",
+            "name": "[농협] 안심 정육세트정육세트정육세트정육트정육세트정육트정육세트정육세트",
             "price": 73000,
             "orderlimit": 1,
             "count": 0,
@@ -123,14 +123,14 @@ export default function GroupList() {
                             <div className="text-pink-600 text-lg">종료</div>
                         )}
                 </div>
-                <div className="flex flex-col -mx-3 my-3 p-3 bg-white ">
+                <div className="flex flex-col my-3">
                     <div className="text-lg font-bold">설맞이 선물세트 기획전</div>
                     <div className="flex items-center">
-                        <span className='text-sm text-slate-500 font-bold'>• 신청기간</span>
+                        <span className='text-slate-500'>신청기간</span>
                         <span className="ml-auto text-blue-700">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                     <div className="flex items-center">
-                        <span className='text-sm text-slate-500 font-bold'>• 수령기간</span>
+                        <span className='text-slate-500'>수령기간</span>
                         <span className="ml-auto text-blue-700">01.16(목) 09:00 ~ 12.23(목) 23:59</span>
                     </div>
                 </div>
@@ -139,16 +139,16 @@ export default function GroupList() {
                         <li key={index} className="">
                             <div className="flex flex-col gap-2 p-4 rounded-lg bg-white shadow">
                                 <div className="flex items-center">
-                                    <div className="relative overflow-hidden basis-full h-4 rounded-full bg-gray-200">
+                                    <div className="relative overflow-hidden w-full h-4.5 rounded-full bg-gray-300">
                                         {(item.orderpieces / item.limitpieces) * 100 < 100 && (
-                                            <div className={"flex items-center h-full bg-pink-300"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                            <div className="flex items-center h-full rounded-full bg-[#FEDEE0]" style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
                                                 <div className="absolute inset-0 flex items-center">
-                                                    <span className="ml-2 text-xs font-bold">달성까지 {(item.limitpieces - item.orderpieces)} 개 남음</span>
+                                                    <span className="ml-2 text-xs font-bold text-[#FF0303]">달성까지 {(item.limitpieces - item.orderpieces)} 개 남음</span>
                                                 </div>
                                             </div>
                                         )}
                                         {(item.orderpieces / item.limitpieces) * 100 >= 100 && (
-                                            <div className={"flex items-center h-full bg-teal-500"} style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
+                                            <div className="flex items-center h-full rounded-full bg-teal-500" style={{ width: `${Math.min((item.orderpieces / item.limitpieces) * 100, 100)}%` }}>
                                                 <div className="absolute inset-0 flex items-center">
                                                     <span className="ml-2 text-white text-xs font-bold">{item.orderpieces} 개 신청중</span>
                                                 </div>
@@ -168,14 +168,14 @@ export default function GroupList() {
                                         }
                                     </Link>
                                     <div className="flex-1 flex flex-col gap-0.5">
-                                        <div className="w-full text-slate-700 leading-tight">{item.name}</div>
-                                        <div className="flex gap-1 text-sm">
+                                        <div className="w-full text-slate-700 line-clamp-2 leading-tight">{item.name}</div>
+                                        <div className="flex gap-1">
                                             {item.tag.map((i) => (
                                                 <span key={i} className='flex justify-center items-center p-1 rounded-sm leading-none bg-slate-100 text-xs text-[#006be3] font-bold'>{i}</span>
                                             ))}
                                         </div>
-                                        <p className="flex items-center">
-                                            <span className="text-3xl text-red-500 mr-0.5 font-bold">{item.price.toLocaleString()}</span>
+                                        <p className="flex items-center font-bold">
+                                            <span className="text-2xl text-red-500 mr-0.5">{item.price.toLocaleString()}</span>
                                             <span className="pt-1.5">원</span>
                                         </p>
                                         <div className="mt-auto">

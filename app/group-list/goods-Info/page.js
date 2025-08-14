@@ -15,38 +15,52 @@ export default function GoodsInfo() {
                 <div className="flex flex-col gap-2 mt-4">
                     <div className="p-4 rounded-lg bg-white ">
                         <p>[동원]참치선물세트S참치선물세트S참치선물세트S참치선물세트S-12호</p>
-                        <p><span className="text-2xl font-bold">29,000</span> 원</p>
+                        <p className="flex items-center font-bold">
+                            <span className="text-2xl text-red-500 mr-0.5">29,000</span>
+                            <span className="pt-1.5">원</span>
+                        </p>
                     </div>
                     <div className="flex flex-col gap-2 p-4 rounded-lg bg-white">
-                        <div className="flex items-center justify-center w-24 py-1 rounded-full text-sm bg-slate-200">
-                            <span>19%</span>&nbsp;달성
-                        </div>
-                        <div className=" overflow-hidden w-full my-auto h-3 rounded-full bg-teal-900/15">
-                            <div className="h-full bg-teal-500" style={{width:"19%"}}></div>
+                        <div className="relative overflow-hidden w-full my-auto h-4.5 rounded-full bg-gray-300">
+                            <div className="flex items-center h-full rounded-full bg-[#FEDEE0]" style={{width:"19%"}}>
+                                <div className="absolute inset-0 flex items-center">
+                                    <span className="ml-2 text-xs font-bold text-[#FF0303]">달성까지 59 개 남음</span>
+                                </div>
+                            </div>
+                            {/* <div className="flex items-center h-full rounded-full bg-teal-500" style={{width:"100%"}}>
+                                <div className="absolute inset-0 flex items-center">
+                                    <span className="ml-2 text-white text-xs font-bold">200 개 신청중</span>
+                                </div>
+                            </div> */}
                         </div>
                         <div className="flex flex-col mt-1">
                             <dl className="flex">
-                                <dt className="text-slate-500">달성량/목표수량</dt>
-                                <dd className="ml-auto"><span className="font-bold">19</span>/100개</dd>
+                                <dt className="text-slate-500">신청수량</dt>
+                                <dd className="ml-auto font-bold">100개</dd>
                             </dl>
                             <dl className="flex">
-                                <dt className="text-slate-500">상품한정수량</dt>
+                                <dt className="text-slate-500">목표수량</dt>
                                 <dd className="ml-auto">150개</dd>
+                            </dl>
+                            <dl className="flex">
+                                <dt className="text-slate-500">상품 한정수량</dt>
+                                <dd className="ml-auto">1개</dd>
                             </dl>
                             <dl className="flex">
                                 <dt className="text-slate-500">1인 구매 제한</dt>
                                 <dd className="ml-auto">1개</dd>
                             </dl>
                         </div>
+                        <p className="text-sm text-red-500">목표수량 미달 시, 공동구매 종료 후 자동 취소됩니다.</p>
                     </div>
                     <div className="flex flex-col p-4 rounded-lg bg-white">
                         <dl className="flex">
                             <dt className="text-slate-500">신청기간</dt>
-                            <dd className="ml-auto">01.16(목)~01.23(목)</dd>
+                            <dd className="ml-auto text-blue-700">01.16(목)~01.23(목)</dd>
                         </dl>
                         <dl className="flex">
                             <dt className="text-slate-500">수령기간</dt>
-                            <dd className="ml-auto">01.16(목)~01.23(목)</dd>
+                            <dd className="ml-auto text-blue-700">01.16(목)~01.23(목)</dd>
                         </dl>
                     </div>
                     <div className="p-4 rounded-lg bg-white">

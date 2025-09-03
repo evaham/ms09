@@ -2,6 +2,7 @@
 import "./globals.css";
 import NavMenu from "./component/navMenu";
 import { ModalProvider } from '@/app/context/modalContext';
+import { TrialProvider } from '@/app/context/trialContext';
 
 export const metadata = {
   title: "MS공동구매",
@@ -18,10 +19,12 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, target-densityDpi=medium-dpi" />
       </head>
       <body className="antialiased" >
-      <ModalProvider>
-        <NavMenu />
-        {children}
-      </ModalProvider>
+      <TrialProvider>
+        <ModalProvider>
+          <NavMenu />
+          {children}
+        </ModalProvider>
+      </TrialProvider>
       </body>
     </html>
   );

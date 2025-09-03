@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import CounterButton from "../component/countButton";
 import TopButton from "../component/topButton";
+import TrialStatusBanner from "../component/trialStatusBanner";
 import Image from "next/image";
 import { useEffect } from 'react';
 
@@ -107,6 +108,7 @@ export default function GroupList() {
 
     return (
         <div>
+            <TrialStatusBanner />
             <div className="flex flex-col p-3">
                 <div className="flex justify-center items-center gap-3 h-14 rounded-full bg-teal-600/15 text-teal-700 font-bold text-xl">
                     <span>신청마감</span>

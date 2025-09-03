@@ -1,18 +1,8 @@
 
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavMenu from "./component/navMenu";
 import { ModalProvider } from '@/app/context/modalContext';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { TrialProvider } from '@/app/context/trialContext';
 
 export const metadata = {
   title: "MS공동구매",
@@ -28,11 +18,13 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width, target-densityDpi=medium-dpi" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
-      <ModalProvider>
-        <NavMenu />
-        {children}
-      </ModalProvider>
+      <body className="antialiased" >
+      <TrialProvider>
+        <ModalProvider>
+          <NavMenu />
+          {children}
+        </ModalProvider>
+      </TrialProvider>
       </body>
     </html>
   );

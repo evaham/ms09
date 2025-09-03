@@ -4,13 +4,17 @@
 import React, { useState } from 'react';
 import CounterButton from '@/app/component/countButton';
 import UserInfoInputModal from '@/app/component/userInfoInputModal';
+import TrialStatusBanner from '@/app/component/trialStatusBanner';
 import Image from 'next/image';
 import Toast from '@/app/component/toast';
+import { useTrialProtection } from '@/app/context/trialContext';
 
 import { useEffect } from 'react';
 import UserInfoAgreeModal from '@/app/component/userInfoAgreeModal';
 
 export default function ApplyList() {
+    const { preventUnexpectedCharge, getTrialStatus } = useTrialProtection();
+    const trialStatus = getTrialStatus();
     // const data = require('/public/data/db.json')
     const [items, setItems] = useState([
         {
@@ -126,6 +130,18 @@ export default function ApplyList() {
     //     }
     // };
 
+    const handleApplyOrder = () => {
+        const billingCheck = preventUnexpectedCharge();
+        if (!billingCheck.canProceed) {
+            showToast(billingCheck.message);
+            return;
+        }
+        setIsInfoInputOpen(true);
+    };
+
+
+
+
     useEffect(() => {
         const handleBeforeUnload = (e) => {
             e.preventDefault();
@@ -141,9 +157,9 @@ export default function ApplyList() {
 
 
 
-
     return (
         <div>
+            <TrialStatusBanner />
             <div className="h-11 px-3 py-1.5 text-sm bg-teal-500 leading-tight text-white">
                 ※ 아래 신청버튼을 눌러 공동구매 신청을 완료하세요<br />
                 ※ 신청 시 선택한 수량이 변경될 수 있습니다.
@@ -187,9 +203,20 @@ export default function ApplyList() {
                         <div className="mb-24 p-4 rounded-lg bg-white shadow">
                             <div className="flex">
                                 <div className="font-bold">총 결제 예상금액</div>
-                                <div className="ml-auto"><span className="text-2xl font-bold mr-1">{totalPrice.toLocaleString()}</span>원</div>
+                                <div className="ml-auto">
+                                    {trialStatus.isTrialPeriod ? (
+                                        <span className="text-2xl font-bold mr-1 text-blue-600">무료 (체험중)</span>
+                                    ) : (
+                                        <span className="text-2xl font-bold mr-1">{totalPrice.toLocaleString()}</span>
+                                    )}
+                                    원
+                                </div>
                             </div>
-                            <p className="flex mt-1 text-sm before:content-['※']">&nbsp;실 결제는 상품 수령기간 내 매장에 방문 후 결제해주세요.</p>
+                            {trialStatus.isTrialPeriod ? (
+                                <p className="flex mt-1 text-sm before:content-['※']">&nbsp;무료 체험 기간 중에는 결제가 진행되지 않습니다. ({trialStatus.daysLeft}일 남음)</p>
+                            ) : (
+                                <p className="flex mt-1 text-sm before:content-['※']">&nbsp;실 결제는 상품 수령기간 내 매장에 방문 후 결제해주세요.</p>
+                            )}
                         </div>
                     </li>
                 </ul>
@@ -202,7 +229,7 @@ export default function ApplyList() {
                             <span className="">상품수량을 선택하세요</span>
                         </button>
                     ) : (
-                        <button type="button" onClick={() => setIsInfoInputOpen(true)} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-500 text-white cursor-pointer">
+                        <button type="button" onClick={handleApplyOrder} className="flex flex-col items-center justify-center w-full h-14 rounded-lg text-center leading-tight bg-teal-500 text-white cursor-pointer">
                             <span className="text-lg font-bold">총 <span>{totalCount}</span>건 공동구매 신청</span>
                         </button>
                     )}
